@@ -1,0 +1,291 @@
+/* Default colors */
+body {
+    background-color: #F7F7F7;
+    color: #464646;
+}
+
+/* Container borders for visualization
+.container-fluid {
+    border: 2px solid black;
+}
+*/
+
+/* Default font awesome icon colors and hover behavior */
+.fa {
+    color: #F7F7F7;
+}
+.fa:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Page Title */
+#page-title {
+    text-align: center;
+    padding: 2rem;
+    font-weight: 300;
+}
+
+#page-title > h1 {
+    font-weight: 450;
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+    width: fit-content;
+    margin: auto;
+    background-color: #F7F7F7;
+}
+.nav-item {
+    color: #464646;
+    font-weight: 400;
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+.nav-item:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline-color: #464646;
+}
+
+@media (max-width: 767.5px) {
+    .navbar {
+        justify-content: right;
+        width: 100vw;
+        text-align: center;
+    }
+}
+
+
+
+/* About */
+#self-portrait {
+
+    /* Potential photo border
+    border: 0.5rem solid #464646;
+    border-radius: 3rem;
+    outline: 0.5rem solid #77FAFF;
+    margin: 0.5rem;
+    */
+}
+#about-me > h2 {
+    font-weight: 450;
+    margin-bottom: 3rem;
+}
+
+    /* For screens smaller than desktop */
+.col-sm-6 > .container-fluid {
+    text-align: center;
+    padding: 2rem;
+    overflow-wrap: normal;
+}
+    /* For desktop screens or larger */
+@media (min-width: 992px) {
+    .col-sm-6 > .container-fluid {
+        text-align: left;
+        padding: 7rem;
+        overflow-wrap: normal;
+    }
+}
+
+
+
+
+
+/* Skills */
+#skills {
+    text-align: center;
+    color: #F7F7F7;
+    background-color: #464646;
+    padding: 1rem;
+}
+
+#skills > h2 {
+    padding: 1rem;
+    font-weight: 450;
+    color: #77FAFF;
+}
+
+.col-xs-6 {
+    text-align: center;
+    flex-grow: 1;
+    width: 30vw;
+    padding: 1rem;
+}
+
+.col-sm-3 {
+    text-align: center;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.col-md-1 {
+    text-align: center;
+    flex-grow: 1;
+    max-width: 100vw;
+    padding: 1rem;
+}
+
+.col-xs-6 > i {
+    font-size: 5rem;
+}
+
+
+/* Projects */
+
+    /* For screens tablet size or larger */
+@media (min-width: 1025px) {
+    #projects {
+        text-align: center;
+        padding: 0vw 20vw 0vw 20vw;
+    }
+    #projects > h2 {
+        padding: 2rem;
+        font-weight: 450;
+    }
+    .project-photos {
+        padding: 1vw 1vw 2vw 1vw;
+    }
+    .project-description {
+        text-align: left;
+        padding: 1vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #projects {
+        text-align: center;
+        padding: 0vw 10vw 0vw 10vw;
+    }
+    #projects > h2 {
+        padding: 2rem;
+        font-weight: 450;
+    }
+    .project-photos {
+        padding: 1vw 1vw 2vw 1vw;
+    }
+    .project-description {
+        text-align: left;
+        padding: 1vw;
+    }
+}
+
+    /* For screens smaller than a tablet */
+@media (max-width: 767px) {
+    #projects {
+        text-align: center;
+    }
+    #projects > h2 {
+        padding: 2rem 2rem 1rem 2rem;
+        font-weight: 450;
+    }
+    .project-photos {
+        padding: 1rem 3rem 3rem 3rem;
+    }
+    .project-description {
+        text-align: center;
+        padding: 2rem 3rem 0rem 3rem;
+        font-size: 0.8rem;
+    }
+    #projects > .odd {
+        flex-direction: column-reverse;
+    }
+    .github-code {
+        font-size: 0.8rem;
+    }
+}
+
+.project-description > h4 {
+    padding-bottom: 0.5rem;
+    font-weight: 450;
+}
+
+    /* Code link to project */
+.github-code {
+    color: #77FAFF;
+    padding: 0.5rem;
+    background-color: #464646;
+    border-radius: 0.5rem;
+}
+.github-code:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    color: #77FAFF;
+}
+.github-code > i {
+    font-size: 0.75rem;
+}
+
+
+
+/* Connect */
+#connect {
+    text-align: center;
+    color: #F7F7F7;
+    background-color: #464646;
+    padding: 1rem;
+}
+#connect > h2 {
+    padding: 1rem 1rem 0rem 1rem;
+    font-weight: 450;
+    color: #77FAFF;
+}
+#connect > .row {
+    padding-bottom: 1rem;
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-xs-12 {
+    padding: 1rem;
+    height: 8rem;
+    width: fit-content;
+    flex-grow: 1;
+}
+
+.col-lg-4 {
+    padding: 1rem;
+    height: 8rem;
+    width: fit-content;
+    flex-grow: 1;
+}
+
+.connect-icon {
+    font-size: 3rem;
+}
+.connect-icon-label {
+    font-size: 1rem;
+    font-family: helvetica;
+    font-weight: 450;
+    padding: 1rem;
+}
+
+
+
+
+
+/* Footer */
+.footer {
+    position: sticky;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer > .fa {
+    color: #464646;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    top: 0.1rem;
+  }
+
+.footer > p {
+    padding-top: 1rem;
+}
