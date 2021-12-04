@@ -152,11 +152,11 @@ body {
         font-weight: 450;
     }
     .project-photos {
-        padding: 1vw 1vw 2vw 1vw;
+        padding: 1vw;
     }
     .project-description {
         text-align: left;
-        padding: 1vw;
+        padding: 2vw;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -169,11 +169,11 @@ body {
         font-weight: 450;
     }
     .project-photos {
-        padding: 1vw 1vw 2vw 1vw;
+        padding: 1vw;
     }
     .project-description {
         text-align: left;
-        padding: 1vw;
+        padding: 3vw;
     }
 }
 
@@ -181,17 +181,18 @@ body {
 @media (max-width: 767px) {
     #projects {
         text-align: center;
+        padding: 2rem;
     }
     #projects > h2 {
-        padding: 2rem 2rem 1rem 2rem;
         font-weight: 450;
     }
     .project-photos {
-        padding: 1rem 3rem 3rem 3rem;
+        padding: 1vw;
+        width: 80vw;
     }
     .project-description {
         text-align: center;
-        padding: 2rem 3rem 0rem 3rem;
+        padding-top: 3rem;
         font-size: 0.8rem;
     }
     #projects > .odd {
@@ -200,6 +201,10 @@ body {
     .github-code {
         font-size: 0.8rem;
     }
+}
+
+.project-photos {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .project-description > h4 {
