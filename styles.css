@@ -28,7 +28,7 @@ body {
 /* Page Title */
 #page-title {
     text-align: center;
-    padding: 2rem;
+    padding-top: 2rem;
     font-weight: 300;
 }
 
@@ -85,20 +85,48 @@ body {
     margin-bottom: 3rem;
 }
 
-    /* For screens smaller than desktop */
-.col-sm-6 > .container-fluid {
-    text-align: center;
-    padding: 2rem;
-    overflow-wrap: normal;
-}
+
     /* For desktop screens or larger */
 @media (min-width: 992px) {
-    .col-sm-6 > .container-fluid {
+    .col-md-6 > .about-me {
         text-align: left;
-        padding: 7rem;
+        padding: 5vw;
         overflow-wrap: normal;
     }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 > .about-me {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-size: 0.9rem;
+    }
+    #about-me > h2 {
+        font-weight: 450;
+        margin-bottom: 1.5rem;
+    }
+}
+
+    /* For screens smaller than a tablet */
+
+@media (max-width: 767px) {
+    .col-md-6 > .about-me {
+        text-align: center;
+        padding: 2vw;
+        overflow-wrap: normal;
+        font-size: 0.8rem;
+    }
+    #about-me > ul {
+        text-align: left;
+    }
+    #about {
+        flex-direction: column-reverse;
+    }
+}
+    
+    
+    
+
 
 .checkout-my-work {
     color: #77FAFF;
