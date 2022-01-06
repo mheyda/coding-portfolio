@@ -110,9 +110,12 @@ body {
     /* For screens smaller than a tablet */
 
 @media (max-width: 1199.97px) {
+    .col-xl-6 > img {
+        padding: 0vw 10vw 0vw 10vw
+    }
     .col-xl-6 > .about-me {
         text-align: center;
-        padding: 2vw;
+        padding: 2vw 10vw 2vw 10vw;
         overflow-wrap: normal;
         font-size: 0.8rem;
     }
@@ -239,7 +242,7 @@ body {
     }
     .project-description {
         text-align: center;
-        padding-top: 3rem;
+        padding: 3rem 1vw 0vw 1vw;
         font-size: 0.8rem;
     }
     #projects > .odd {
