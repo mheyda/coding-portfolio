@@ -72,13 +72,10 @@ body {
 
 /* About */
 #self-portrait {
-
-    /* Potential photo border
-    border: 0.5rem solid #464646;
-    border-radius: 3rem;
-    outline: 0.5rem solid #77FAFF;
-    margin: 0.5rem;
-    */
+    padding: 10vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #about-me > h2 {
     font-weight: 450;
@@ -110,9 +107,7 @@ body {
     /* For screens smaller than a tablet */
 
 @media (max-width: 1199.97px) {
-    .col-xl-6 > img {
-        padding: 0vw 10vw 0vw 10vw
-    }
+    
     .col-xl-6 > .about-me {
         text-align: center;
         padding: 2vw 10vw 2vw 10vw;
