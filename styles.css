@@ -72,7 +72,7 @@ body {
 
 /* About */
 #self-portrait {
-    padding: 10vw;
+    padding: 2vw 10vw 2vw 10vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -86,8 +86,8 @@ body {
     /* For desktop screens or larger */
 @media (min-width: 1199.98px) {
     .col-xl-6 > .about-me {
-        text-align: left;
-        padding: 5vw;
+        text-align: justify;
+        padding: 5vw 5vw 5vw 0vw;
         overflow-wrap: normal;
     }
 }
@@ -109,20 +109,29 @@ body {
 @media (max-width: 1199.97px) {
     
     .col-xl-6 > .about-me {
-        text-align: center;
-        padding: 2vw 10vw 2vw 10vw;
+        text-align: justify;
+        padding: 0vw 10vw 2vw 10vw;
         overflow-wrap: normal;
         font-size: 0.8rem;
     }
+
+    .about-me > h2 {
+        text-align: center;
+    }
+
     #about-me > ul, .fun-facts {
-        text-align: left;
+        text-align: justify;
     }
-    #about {
-        flex-direction: column-reverse;
-    }
+
     .col-xl-6 {
         text-align: center;
     }
+
+    #self-portrait {
+        padding-left: 25vw;
+        padding-right: 25vw;
+    }
+
 }
     
     
@@ -200,11 +209,11 @@ body {
         padding: 1vw;
     }
     .project-description {
-        text-align: left;
+        text-align: justify;
         padding: 2vw;
     }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767.6px) and (max-width: 1024px) {
     #projects {
         text-align: center;
         padding: 0vw 10vw 5vw 10vw;
@@ -217,27 +226,27 @@ body {
         padding: 1vw;
     }
     .project-description {
-        text-align: left;
-        padding: 3vw;
+        text-align: justify;
+        padding-left: 3vw;
     }
 }
 
     /* For screens smaller than a tablet */
-@media (max-width: 767px) {
+@media (max-width: 767.5px) {
     #projects {
         text-align: center;
-        padding: 2rem;
+        padding: 5vw 10vw 5vw 10vw;
     }
     #projects > h2 {
         font-weight: 450;
     }
     .project-photos {
-        padding: 1vw;
-        width: 80vw;
+        width: 100vw;
+        padding: 2vw;
     }
     .project-description {
-        text-align: center;
-        padding: 3rem 1vw 0vw 1vw;
+        text-align: justify;
+        padding-top: 3vw;
         font-size: 0.8rem;
     }
     #projects > .odd {
