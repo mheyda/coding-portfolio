@@ -171,25 +171,26 @@ body {
 .col-xs-6 {
     text-align: center;
     flex-grow: 1;
-    width: 25vw;
-    padding: 2vw;
+    width: 20vw;
+    padding: 0.5vw;
 }
 
-.col-sm-3 {
+.col-sm-2 {
     text-align: center;
     flex-grow: 1;
-    padding: 2vw;
+    padding: 0.5vw;
 }
 
-.col-md-1 {
+.col-md-2 {
     text-align: center;
     flex-grow: 1;
     max-width: 100vw;
-    padding: 2vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
 }
 
-.col-xs-6 > i {
-    font-size: 8vw;
+.col-xs-6 > i, .iconify {
+    font-size: 6vw;
 }
 
 
