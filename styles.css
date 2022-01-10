@@ -85,8 +85,18 @@ body {
 }
 
 
+@media (min-width: 1800px) {
+    #about {
+        width: 1200px;
+        margin: auto;
+        padding: 50px 0px 50px 0px;
+    }
+    #self-portrait {
+        padding: 50px;
+    }
+}
     /* For desktop screens or larger */
-@media (min-width: 1199.98px) {
+@media (min-width: 1199.98px) and (max-width: 1799px) {
     .col-xl-6 > .about-me {
         text-align: justify;
         padding: 5vw 5vw 5vw 0vw;
@@ -191,8 +201,28 @@ body {
 
 /* Projects */
 
+@media (min-width: 1800px) {
+    #projects {
+        text-align: center;
+        width: 1200px;
+        margin: auto;
+    }
+    #projects > h2 {
+        padding: 2vw;
+        font-weight: 450;
+    }
+    .project-photos {
+        padding: 1vw;
+    }
+    .project-description {
+        text-align: justify;
+        padding: 2rem;
+        width: 600px;
+    }    
+}
+
     /* For screens tablet size or larger */
-@media (min-width: 1025px) {
+@media (min-width: 1200px) and (max-width: 1799px) {
     #projects {
         text-align: center;
         padding: 0vw 15vw 5vw 15vw;
@@ -209,7 +239,7 @@ body {
         padding: 2vw;
     }
 }
-@media (min-width: 767.6px) and (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     #projects {
         text-align: center;
         padding: 0vw 10vw 5vw 10vw;
@@ -223,13 +253,13 @@ body {
     }
     .project-description {
         text-align: justify;
-        padding-left: 3vw;
+        padding: 0vw 3vw 0vw 3vw;
         font-size: 0.9rem;
     }
 }
 
     /* For screens smaller than a tablet */
-@media (max-width: 767.5px) {
+@media (max-width: 991px) {
     #projects {
         text-align: center;
         padding: 3vw 10vw 0vw 10vw;
@@ -257,6 +287,7 @@ body {
 
 .project-photos {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
 }
 
 .project-description > h4 {
