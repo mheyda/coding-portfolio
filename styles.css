@@ -160,6 +160,15 @@ body {
 
 
 /* Skills */
+@media (min-width: 1800px) {
+    .skills-content {
+        width: 1200px;
+        margin: auto;
+    }
+    i {
+        line-height:
+    }
+}
 #skills {
     text-align: center;
     color: #F7F7F7;
@@ -190,12 +199,12 @@ body {
     text-align: center;
     flex-grow: 1;
     max-width: 100vw;
-    padding: 0.5vw;
-    margin: 0.5vw;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .col-xs-6 > i, .iconify {
-    font-size: 6vw;
+    font-size: 4rem;
 }
 
 
