@@ -165,9 +165,6 @@ body {
         width: 1200px;
         margin: auto;
     }
-    i {
-        line-height:
-    }
 }
 #skills {
     text-align: center;
@@ -320,14 +317,20 @@ body {
 
 
 /* Connect */
+@media (min-width: 1800px) {
+    .contact-content {
+        width: 1200px;
+        margin: auto;
+    }
+}
 #connect {
     text-align: center;
     color: #F7F7F7;
     background-color: #464646;
-    padding: 3vw 0vw 0vw 0vw;
+    padding: 3rem 0 0 0;
 }
 #connect > h2 {
-    padding-bottom: 2vw;
+    padding-bottom: 2rem;
     font-weight: 450;
     color: #77FAFF;
 }
