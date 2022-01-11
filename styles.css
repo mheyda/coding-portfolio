@@ -52,12 +52,11 @@
 
 
 /* Main */
-html {
+html, body {
     scroll-behavior: smooth;
-}
-body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1em;
+    overflow-x: hidden;
 }
 a:hover {
     color: inherit;
@@ -70,13 +69,11 @@ h2 {
 /* Containers */
 .background-container {
 
-    width: 98vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
 }
 .content-container {
 
-    width: 97vw;
+    width: 100vw;
     margin: auto;
     padding: 1rem;
 }
