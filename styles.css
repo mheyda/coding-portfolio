@@ -218,3 +218,20 @@ h2 {
         margin: auto;
     }
 }
+
+
+
+
+
+footer {
+    height: fit-content;
+    display: flex;
+}
+hr {
+    display: block;
+    border-top: 3px solid #464646;
+    width: 200px;
+}
+.copyright {
+    font-size: 0.9rem;
+}
