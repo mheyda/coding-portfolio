@@ -22,211 +22,217 @@
         <title>Marshall's Portfolio</title>
     </head>
     <body>
-
         <!-- Page Title -->
-        <div class="container-fluid" id="page-title">
-            <h1>MARSHALL HEYDA</h1>
-            <p>Front-End Developer</p>
+        <div class="background-container text-align-center">
+            <div class="content-container">
+                <h1>MARSHALL HEYDA</h1>
+                Front-End Developer
+            </div>
         </div>
 
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-md navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#about">About</a>
-                    <a class="nav-item nav-link" href="#skills">Skills</a>
-                    <a class="nav-item nav-link" href="#projects">Projects</a>
-                    <a class="nav-item nav-link" href="#connect">Contact</a>
-                </div>
+        <div class="background-container text-align-center">
+            <div class="content-container">
+                <nav class="navbar navbar-light navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="#about">About</a>
+                            <a class="nav-item nav-link" href="#skills">Skills</a>
+                            <a class="nav-item nav-link" href="#projects">Projects</a>
+                            <a class="nav-item nav-link" href="#connect">Contact</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </div>
 
         <!-- About -->
-        <div class="row align-items-center no-gutters" id="about">
-            <div class="col-xl-6">
-                <img src="photos/Coding Headshot Avatar.jpg" class="img-fluid" id="self-portrait" alt="Marshall Heyda">
-            </div>
-            <div class="col-xl-6">
-                <div class="container-fluid about-me" id="about-me">
-                    <h2>Hi, I'm Marshall!</h2>
-                    <h5>Thanks for visiting. Here's a little bit about me.</h5>
-                    <p>
-                        
-                        In May 2021 I graduated Summa Cum Laude with a bachelor's degree in civil engineering and 
-                        planned to attend Stanford University for my master's in structural engineering. That all 
-                        changed, however, the following summer when I fell in love with coding while taking Harvard's 
-                        CS50 for fun. I decided to dive head first into the world of software development by forgoing 
-                        grad school (at least for structural engineering), quitting my engineering job, and beginning 
-                        my path to become a "self-taught" software developer.
-                    </br  >
-                        <h5 class="fun-facts">Fun facts:</h5>
-                        <ul>
-                            <li>I have a passion for photography, and I believe those skills compliment front-end development 📸</li>
-                            <li>My best thinking happens when I'm out for a run, taking a shower, or trying to fall asleep 🤦‍♂️</li>
-                            <li>I ran my first and only marathon in 2020, but I have a desire to run another one sometime in the future 🏃</li>
-                            
-                        </ul>
+        <div class="background-container" id="about">
+            <div class="row no-gutters content-container text-align-justify">
+                <div class="col-md-16 col-lg-4 left-half-container text-align-center">
+                    <img src="photos/Coding Headshot Avatar.jpg" class="self-portrait img-fluid text-padding-right" alt="Marshall Heyda">
+                </div>
+                <div class="col-md-16 col-lg-8 right-half-container">
+                    <div class="about-me text-padding-left text-align-center">
+                        <h2 class="light-heading">Hi, I'm Marshall!</h2>
+                        <h5 class="text-align-left">Thanks for visiting. Here's a little bit about me.</h5>
+                        <p class="text-align-justify">
+                            In May 2021 I graduated Summa Cum Laude with a bachelor's degree in civil engineering and 
+                            planned to attend Stanford University for my master's in structural engineering. That all 
+                            changed, however, the following summer when I fell in love with coding while taking Harvard's 
+                            CS50 for fun. I decided to dive head first into the world of software development by forgoing 
+                            grad school (at least for structural engineering), quitting my engineering job, and beginning 
+                            my path to become a "self-taught" software developer.
                         <br>
-                        <a class="checkout-my-work" href="#skills">See Technologies I Use</a>
-                    </p>
-
+                            <h5 class="text-align-left">Fun facts:</h5>
+                            <ul class="text-align-left">
+                                <li>I have a passion for photography, and I believe those skills compliment front-end development 📸</li>
+                                <li>My best thinking happens when I'm out for a run, taking a shower, or trying to fall asleep 🤦‍♂️</li>
+                                <li>I ran my first and only marathon in 2020, but I have a desire to run another one sometime in the future 🏃</li>
+                            </ul>
+                        </p>
+                        <a class="dark-button" href="#skills">See Technologies I Use</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-
         <!-- Skills -->
-        <div id="skills">
-            <h2>Skills</h2>
-            <div class="row align-items-center no-gutters skills-content">
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-bootstrap"></i>
+        <div class="background-container dark text-align-center" id="skills">
+            <div class="content-container">
+                <h2 class="dark-heading">Skills</h2>
+                <div class="row align-items-center no-gutters skills-content">
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-bootstrap light-icon skills-icon"></i>
                         <br>
                         Bootstrap
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-css3-alt"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-css3-alt light-icon skills-icon"></i>
                         <br>
                         CSS
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <span class="iconify" data-icon="simple-icons:django"></span>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:django"></span>
                         <br>
                         Django
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-git-alt"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-git-alt light-icon skills-icon"></i>
                         <br>
                         git
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-html5"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-html5 light-icon skills-icon"></i>
                         <br>
                         HTML
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-java"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-java light-icon skills-icon"></i>
                         <br>
                         Java
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-js-square"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-js-square light-icon skills-icon"></i>
                         <br>
                         JavaScript
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <i class="fab fa-python"></i>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <i class="fab fa-python light-icon skills-icon"></i>
                         <br>
                         Python
                     </div>
-                    <div class="col-xs-6 col-sm-2 col-md-2">
-                        <span class="iconify" data-icon="akar-icons:vscode-fill"></span>
+                    <div class="col-sm-2 col-md-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="akar-icons:vscode-fill"></span>
                         <br>
                         VS Code
                     </div>
+                </div>
             </div>
         </div>
 
-
-
         <!-- Projects -->
-        <div id="projects">
-            <h2>Projects</h2>
-            
-            <!-- First project -->
-            <div class="row align-items-center no-gutters odd">
-                <div class="col-md-16 col-lg-6">
-                    <img src="photos/Wiki Cover Photo.jpg" class="img-fluid project-photos" alt="Wiki Application">
-                </div>
-                <div class="col-md-12 col-lg-6">
-                    <div class="project-description">
-                        <h4>Wiki Application</h4>
-                        <p>A Wikipedia-style CRUD application made with <b>Django</b> using <b>Python</b>, <b>HTML</b>, 
-                            <b>CSS</b>, and a *hint* of <b>JavaScript</b>.
+        <div class="background-container text-align-center" id="projects">
+            <div class="content-container">
+                <h2 class="light-heading">Projects</h2>
+                <!-- First project -->
+                <div class="row align-items-center no-gutters odd">
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/Wiki Cover Photo.jpg" class="img-fluid project-photos" alt="Wiki Application">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description text-padding-left">
+                            <h4>Wiki Application</h4>
+                            <p class="text-align-justify">A Wikipedia-style CRUD application made with <b>Django</b> using <b>Python</b>, <b>HTML</b>, 
+                                <b>CSS</b>, and a *hint* of <b>JavaScript</b>.
 
-                            Functionality includes viewing, creating, editing, and deleting wiki entries, 
-                            searching for entries, and selecting a page at random. 
-                            <br>
-                            <br>
-                            The app is deployed on Heroku, where a live demo version can be viewed.
-                            Note: Functionality has intentionally been limited for the demo.
-                            <br>
-                            <br>
-                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" class="github-code">Github Repo</a>
-                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" class="github-code">Live Demo</a>
-                        </p>
+                                Functionality includes viewing, creating, editing, and deleting wiki entries, 
+                                searching for entries, and selecting a page at random. 
+                                <br>
+                                <br>
+                                The app is deployed on Heroku, where a live demo version can be viewed.
+                                Note: Functionality has intentionally been limited for the demo.
+                            </p>
+                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" class="dark-button">Github Repo</a>
+                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" class="dark-button">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Project-->
+                <div class="row align-items-center no-gutters even">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description text-padding-right">
+                            <h4>Photography Portfolio</h4>
+                            <p class="text-align-justify">My photography portfolio.
+                            </p>
+                            <a href="https://github.com/mheyda/photography-site" target="_blank" class="dark-button">Github Repo</a>
+                            <a href="" target="_blank" class="dark-button">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="photos/Photo Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall Heyda">
+                    </div>
+                </div>
+                <!-- Third Project -->
+                <div class="row align-items-center no-gutters odd">
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/Portfolio Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall Heyda">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description text-padding-left">
+                            <h4>Coding Portfolio</h4>
+                            <p class="text-align-justify">My personal coding portfolio (this website) was built from scratch using <b>HTML</b>, <b>CSS</b>, 
+                                and <b>Bootstrap</b>. For design inspiration, I started by creating a mock-up site on Wix.com, 
+                                and then began building my portfolio to match the design I selected. Being my first 
+                                portfolio, I wanted to keep it simple and clean while focusing on responsiveness across 
+                                devices of all sizes.
+                            </p>
+                            <a href="https://github.com/mheyda/Portfolio-Site" target="_blank" class="dark-button">Github Repo</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Second Project-->
-            <div class="row align-items-center no-gutters even">
-                <div class="col-md-12 col-lg-6">
-                    <div class="project-description">
-                        <h4>Photography Portfolio</h4>
-                        <p>My photography portfolio.
-                            <br>
-                            <br>
-                            <a href="https://github.com/mheyda/photography-site" target="_blank" class="github-code">Github Repo</a>
-                            <a href="" target="_blank" class="github-code">Live Demo</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-6">
-                    <img src="photos/Photo Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall Heyda">
-                </div>
-            </div>
-            
-            <!-- Third Project -->
-            <div class="row align-items-center no-gutters odd">
-                <div class="col-md-16 col-lg-6">
-                    <img src="photos/Portfolio Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall Heyda">
-                </div>
-                <div class="col-md-12 col-lg-6">
-                    <div class="project-description">
-                        <h4>Coding Portfolio</h4>
-                        <p>My personal coding portfolio (this website) was built from scratch using <b>HTML</b>, <b>CSS</b>, 
-                            and <b>Bootstrap</b>. For design inspiration, I started by creating a mock-up site on Wix.com, 
-                            and then began building my portfolio to match the design I selected. Being my first 
-                            portfolio, I wanted to keep it simple and clean while focusing on responsiveness across 
-                            devices of all sizes.
-                            <br>
-                            <br>
-                            <a href="https://github.com/mheyda/Portfolio-Site" target="_blank" class="github-code">Github Repo</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <!-- Connect -->
-        <div id="connect">
-            <h2>Let's Connect!</h2>
-            <div class="row align-items-center no-gutters contact-content">
-                <div class="col-xs-12 col-lg-4">
-                    <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" class="fa fa-linkedin connect-icon"><div class="connect-icon-label">Connect on LinkedIn</div></a>
-                </div>
-                <div class="col-xs-12 col-lg-4">
-                    <a href="mailto:marshallheyda@gmail.com" target="_blank" class="fa fa-envelope connect-icon"><div class="connect-icon-label">marshallheyda@gmail.com</div></a>
-                </div>
-                <div class="col-xs-12 col-lg-4">
-                    <a href="documents/Marshall Heyda - CS Resume.pdf" download target="_blank" class="fa fa-file connect-icon"><div class="connect-icon-label">Download My Resume</div></a>
+        <div class="background-container dark text-align-center" id="connect">
+            <div class="content-container">
+                <h2 class="dark-heading">Let's Connect!</h2>
+                <div class="row align-items-center no-gutters contact-content">
+                    <div class="col-xs-12 col-lg-4">
+                        <a href="https://www.linkedin.com/in/marshallheyda/" download target="_blank">
+                            <i class="fa fa-linkedin light-icon connect-icon"></i></a>
+                            <br>
+                            Connect on LinkedIn
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                        <a href="mailto:marshallheyda@gmail.com" download target="_blank">
+                            <i class="fa fa-envelope light-icon connect-icon"></i>
+                            <br>
+                            marshallheyda@gmail.com
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                        <a href="documents/Marshall Heyda - CS Resume.pdf" download target="_blank">
+                            <i class="fa fa-file light-icon connect-icon"></i>
+                            <br>
+                            Download My Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-
         <!-- Footer -->
-        <div class="container-fluid" id="footer">
-            <div class="footer">
-                <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" class="fa fa-linkedin"></a>
-                <a href="https://github.com/mheyda" target="_blank" class="fa fa-github"></a>
-                <a href="https://twitter.com/marshall_codes" target="_blank" class="fa fa-twitter"></a>
+        <div class="background-container text-align-center">
+            <div class="footer content-container">
+                <a href="mailto:marshallheyda@gmail.com" download target="_blank" class="fa fa-envelope dark-icon footer-icon"></a>
+                <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" class="fa fa-linkedin dark-icon footer-icon"></a>
+                <a href="https://github.com/mheyda" target="_blank" class="fa fa-github dark-icon footer-icon"></a>
+                <a href="https://twitter.com/marshall_codes" target="_blank" class="fa fa-twitter dark-icon footer-icon"></a>
                 <br>
                 ©2022 Marshall Heyda
             </div>
