@@ -69,23 +69,23 @@ h2 {
 
 /* Containers */
 .background-container {
-    border: 5px solid orange;
+
     width: 98vw;
     margin-left: auto;
     margin-right: auto;
 }
 .content-container {
-    border: 5px solid red;
-    width: 100vw;
+
+    width: 97vw;
     margin: auto;
     padding: 1rem;
 }
 .left-half-container {
-    border: 3px solid purple;
+
     height: fit-content;
 }
 .right-half-container {
-    border: 3px solid purple;
+
     height: fit-content;
 }
 
@@ -206,12 +206,12 @@ h2 {
     }
     .project-description {
         text-align: justify;
-        border: 5px solid blue;
+
     }
 }
 @media (min-width: 1200px) {
     .content-container {
-        border: 5px solid red;
+
         width: 1200px;
         margin: auto;
     }
