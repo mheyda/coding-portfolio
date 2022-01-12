@@ -51,6 +51,9 @@
 
 
 
+
+
+
 /* Main */
 html, body {
     scroll-behavior: smooth;
@@ -68,21 +71,21 @@ h2 {
 
 /* Containers */
 .background-container {
-
+    border: 5px solid orange;
     width: 100vw;
 }
 .content-container {
-
+    border: 5px solid red;
     width: 100vw;
     margin: auto;
     padding: 1rem;
 }
 .left-half-container {
-
+    border: 3px solid purple;
     height: fit-content;
 }
 .right-half-container {
-
+    border: 3px solid purple;
     height: fit-content;
 }
 
@@ -134,7 +137,9 @@ h2 {
     text-align: right;
 }
 
-/* Custom sections */
+/* -------------- Custom sections ------------------- */
+
+/* About section */
 .self-portrait {
     width: 50vw;
     height: 50vw;
@@ -142,6 +147,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Projects section */
 .project-description {
     padding-top: 1rem;
     padding-bottom: 3rem;
@@ -155,6 +162,8 @@ h2 {
 .even {
     flex-direction: column-reverse;
 }
+
+/* Skills section */
 .skills-col {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -166,12 +175,34 @@ h2 {
 .skills-icon {
     font-size: 3rem;
 }
+
+/* Footer section */
 .footer-icon {
     font-size: 1.4rem;
     padding: 0.5rem;
+    color: inherit;
 }
 .footer-icon:hover {
     text-decoration: none;
+}
+footer {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.footer-left {
+    padding-bottom: 1rem;
+}
+.footer-right {
+    border-top: 3px solid #464646;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+}
+.copyright {
+    display: block;
+    font-size: 0.9rem;
 }
 
 /* Responsiveness */
@@ -203,34 +234,28 @@ h2 {
     }
     .project-description {
         text-align: justify;
-
+        border: 5px solid blue;
+    }
+    .footer-flex {
+        display: flex;
+    }
+    .footer-left {
+        width: 55vw;
+        padding-bottom: 0;
+    }
+    .footer-right {
+        border-top: none;
+        border-left: 3px solid #464646;
+        width: 45vw;
+        text-align: left;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 @media (min-width: 1200px) {
     .content-container {
-
+        border: 5px solid red;
         width: 1200px;
         margin: auto;
     }
-    .contact-content {
-        width: 1200px;
-        margin: auto;
-    }
-}
-
-
-
-
-
-footer {
-    height: fit-content;
-    display: flex;
-}
-hr {
-    display: block;
-    border-top: 3px solid #464646;
-    width: 200px;
-}
-.copyright {
-    font-size: 0.9rem;
 }
