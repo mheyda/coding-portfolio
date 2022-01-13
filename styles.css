@@ -1,117 +1,3 @@
-.certificates {
-    display: flex;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border: 2px solid purple;
-}
-
-.certificates-col {
-    margin: auto;
-}
-
-.certificates-content {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: var(--neutrallight);
-    margin: 0.5rem;
-    padding: 1rem;
-}
-.certificates-image {
-    height: 2rem;
-    text-align: left;
-    margin-bottom: 0.5rem;
-}
-
-@media (min-width: 576px) {
-    .certificates-image {
-        height: 3.5rem;
-    }
-}
-@media (min-width: 992px) {
-    .certificates-content {
-        height: 17rem;
-    }
-}
-
-
-
-
-.navbar-toggler {
-    border: 3px solid var(--neutrallight);
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-    font-size: 28px;
-}
-/* Navigation Bar */
-.navbar-toggler:focus, .navbar-toggler:active {
-    outline: none;
-    border: 3px solid var(--neutrallight);
-    background-color: var(--accentlight);
-}
-
-
-.nav-link {
-    font-size: 1.2rem;
-}
-.nav-link:hover {
-    opacity: 1;
-    color: var(--accentlight);
-}
-
-.navbar-brand h4{
-    font-size: 1.2rem;
-    margin: 0;
-}
-.navbar-brand h6 {
-    font-size: 1rem;
-    margin: 0;
-}
-.navbar {
-    padding: 0;
-    margin-bottom: -0.5rem;
-    display: flex;
-}
-hr {
-    border-top: 3px solid var(--accentlight);
-    width: 60vw;
-    max-width: 20rem;
-    margin-top: 0.1rem;
-    margin-bottom: 0.3rem;
-}
-
-@media (min-width: 576px) {
-    .navbar-brand {
-        padding: 0;
-    }
-    .navbar-brand h4 {
-        font-size: 2rem;
-    }
-    .navbar-brand h6 {
-        font-size: 1.5rem;
-    }
-    hr {
-        margin-top: 0.4rem;
-        margin-bottom: 0.4rem;
-    }
-
-}
-@media (min-width: 992px) {
-    .navbar {
-        align-items: flex-end;
-    }
-    .navbar-nav {
-        margin-left: auto;
-        line-height: 0;
-        padding: 0;
-    }
-    .nav-link {
-        margin-left: 2rem;
-    }
-}
-
-
-
-
-
 /* Main */
 html, body {
     scroll-behavior: smooth;
@@ -126,23 +12,19 @@ h2 {
 
 /* Containers */
 .background-container {
-    border: 5px solid orange;
     width: 100vw;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 .content-container {
-    border: 5px solid red;
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 .left-half-container {
-    border: 3px solid purple;
     height: fit-content;
 }
 .right-half-container {
-    border: 3px solid purple;
     height: fit-content;
 }
 
@@ -249,7 +131,44 @@ h2 {
 /* -------------- Custom sections ------------------- */
 
 /* Home section */
-
+.navbar-toggler {
+    border: 3px solid var(--neutrallight);
+    color: var(--neutrallight);
+    background-color: var(--neutraldark);
+    font-size: 28px;
+}
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    border: 3px solid var(--neutrallight);
+    background-color: var(--accentlight);
+}
+.nav-link {
+    font-size: 1.2rem;
+}
+.nav-link:hover {
+    opacity: 1;
+    color: var(--accentlight);
+}
+.navbar-brand h4{
+    font-size: 1.2rem;
+    margin: 0;
+}
+.navbar-brand h6 {
+    font-size: 1rem;
+    margin: 0;
+}
+.navbar {
+    padding: 0;
+    margin-bottom: -0.5rem;
+    display: flex;
+}
+hr {
+    border-top: 3px solid var(--accentlight);
+    width: 60vw;
+    max-width: 20rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+}
 
 /* About section */
 .self-portrait {
@@ -293,6 +212,27 @@ h2 {
     margin-top: -1rem;
 }
 
+/* Certificates section */
+.certificates {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.certificates-col {
+    margin: auto;
+}
+.certificates-content {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--neutrallight);
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.certificates-image {
+    height: 2rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
 /* Footer section */
 .footer-icon {
     font-size: 1.4rem;
@@ -327,7 +267,22 @@ footer {
 
 /* Responsiveness */
 @media (min-width: 576px) {
-    
+    .navbar-brand {
+        padding: 0;
+    }
+    .navbar-brand h4 {
+        font-size: 2rem;
+    }
+    .navbar-brand h6 {
+        font-size: 1.5rem;
+    }
+    hr {
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+    .certificates-image {
+        height: 3.5rem;
+    }
 }
 @media (min-width: 768px) {
     
@@ -342,6 +297,17 @@ footer {
     .text-padding-right {
         padding-right: 1rem;
     }
+    .navbar {
+        align-items: flex-end;
+    }
+    .navbar-nav {
+        margin-left: auto;
+        line-height: 0;
+        padding: 0;
+    }
+    .nav-link {
+        margin-left: 2rem;
+    }
     .about-me h2 {
         text-align: left;
     }
@@ -354,7 +320,9 @@ footer {
     }
     .project-description {
         text-align: justify;
-        border: 5px solid blue;
+    }
+    .certificates-content {
+        height: 17rem;
     }
     .footer-flex {
         display: flex;
@@ -378,7 +346,6 @@ footer {
 }
 @media (min-width: 1200px) {
     .content-container {
-        border: 5px solid red;
         width: 1150px;
         margin: auto;
     }
