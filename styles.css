@@ -27,6 +27,9 @@
     }
 }
 @media (min-width: 992px) {
+    .certificates-content {
+        height: 17rem;
+    }
 }
 
 
@@ -101,7 +104,7 @@ hr {
         padding: 0;
     }
     .nav-link {
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 }
 
