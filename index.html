@@ -17,20 +17,38 @@
         <!-- Font Awesome Icons -->
         <script src="https://kit.fontawesome.com/a7e713de55.js" crossorigin="anonymous"></script>
 
-        <link href="/photos/favicon.ico" rel="icon">
+        <link href="/photos/tree.png" rel="icon">
 
         <title>Marshall's Portfolio</title>
     </head>
     <body>
         <!-- Page Title -->
-        <div class="background-container text-align-center">
-            <div class="content-container">
-                <h1>MARSHALL HEYDA</h1>
-                Front-End Developer
+        <div class="background-container dark" id="home">
+            <div class="home content-container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand plain-link text-align-center" href="#home">
+                        <h4>MARSHALL HEYDA</h4>
+                        <hr>
+                        <h6>Front-End Developer</h6>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span>
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav text-align-center">
+                            <a class="nav-item nav-link light-text-link" href="#about">About</a>
+                            <a class="nav-item nav-link light-text-link" href="#skills">Skills</a>
+                            <a class="nav-item nav-link light-text-link" href="#projects">Projects</a>
+                            <a class="nav-item nav-link light-text-link" href="#connect">Contact</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
 
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar 
         <div class="background-container text-align-center">
             <div class="content-container">
                 <nav class="navbar navbar-light navbar-expand-lg">
@@ -48,10 +66,11 @@
                 </nav>
             </div>
         </div>
+        -->
 
         <!-- About -->
         <div class="background-container" id="about">
-            <div class="row no-gutters content-container text-align-justify">
+            <div class="row no-gutters content-container light text-align-justify">
                 <div class="col-md-16 col-lg-4 left-half-container text-align-center">
                     <img src="photos/Coding Headshot Avatar.jpg" class="self-portrait img-fluid text-padding-right" alt="Marshall Heyda">
                 </div>
@@ -81,8 +100,8 @@
         </div>
 
         <!-- Skills -->
-        <div class="background-container dark text-align-center" id="skills">
-            <div class="content-container">
+        <div class="background-container light text-align-center" id="skills">
+            <div class="content-container gray">
                 <h2 class="dark-heading">Skills</h2>
                 <div class="row align-items-center no-gutters skills-content">
                     <div class="col-sm-2 col-md-1 skills-col">
@@ -136,7 +155,7 @@
 
         <!-- Projects -->
         <div class="background-container text-align-center" id="projects">
-            <div class="content-container">
+            <div class="content-container light">
                 <h2 class="light-heading">Projects</h2>
                 <!-- First project -->
                 <div class="row align-items-center no-gutters odd">
@@ -198,8 +217,8 @@
         </div>
 
         <!-- Certificates -->
-        <div class="background-container dark text-align-center" id="certificates">
-            <div class="content-container">
+        <div class="background-container text-align-center" id="certificates">
+            <div class="content-container gray">
                 <h2 class="dark-heading">Certificates</h2>
                 <div class="row align-items-center no-gutters">
 
@@ -208,7 +227,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="background-container text-align-center">
+        <footer class="background-container dark text-align-center">
             <div class="content-container footer-flex">
                 <div class="footer-left">
                     <p>
@@ -217,21 +236,21 @@
                     </p>
                     <br>
                     <p>
-                        <a class="dark-button" href="#skills">Send Me an Email</a>
+                        <a class="light-button" href="#skills">Send Me an Email</a>
                     </p>
-                    <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" class="fa fa-linkedin dark-icon footer-icon"></a>
-                    <a href="https://github.com/mheyda" target="_blank" class="fa fa-github dark-icon footer-icon"></a>
-                    <a href="https://twitter.com/marshall_codes" target="_blank" class="fa fa-twitter dark-icon footer-icon"></a>     
+                    <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" class="fa fa-linkedin light-icon-link footer-icon"></a>
+                    <a href="https://github.com/mheyda" target="_blank" class="fa fa-github light-icon-link footer-icon"></a>
+                    <a href="https://twitter.com/marshall_codes" target="_blank" class="fa fa-twitter light-icon-link footer-icon"></a>     
                 </div>
                 <div class="footer-right">
-                    <a class="nav-item nav-link" href="#about">About</a>
-                    <a class="nav-item nav-link" href="#skills">Skills</a>
-                    <a class="nav-item nav-link" href="#projects">Projects</a>
-                    <a class="nav-item nav-link" href="#connect">Contact</a>
+                    <a class="light-text-link footer-link" href="#about">About</a>
+                    <a class="light-text-link footer-link" href="#skills">Skills</a>
+                    <a class="light-text-link footer-link" href="#projects">Projects</a>
+                    <a class="light-text-link footer-link" href="#connect">Contact</a>
                     <br>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="copyright dark">
                 © Marshall Heyda
                 <script>
                     var year = new Date().getFullYear()
