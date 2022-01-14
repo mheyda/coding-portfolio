@@ -162,6 +162,9 @@ h2 {
     margin-bottom: -0.5rem;
     display: flex;
 }
+.navbar-nav {
+    padding-top: 1rem;
+}
 hr {
     border-top: 3px solid var(--accentlight);
     width: 60vw;
@@ -281,6 +284,7 @@ footer {
 .copyright {
     display: block;
     font-size: 0.9rem;
+    padding-bottom: 1rem;
 }
 
 /* Responsiveness */
