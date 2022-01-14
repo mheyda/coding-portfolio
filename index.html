@@ -20,7 +20,6 @@
         <!-- Browser Icon -->
         <link href="https://api.iconify.design/vs/m-square.svg?color=%232A3132" rel="icon">
         
-
         <title>Marshall's Portfolio</title>
     </head>
     <body>
@@ -76,11 +75,38 @@
                                 <li>I ran my first and only marathon in 2020, but I have a desire to run another one sometime in the future 🏃</li>
                             </ul>
                         </p>
-                        <a class="dark-button" href="#skills">See Technologies I Use</a>
                     </div>
                 </div>
+                <div class="more-about-me text-align-justify">
+                    <p>
+                        In May 2021 I graduated Summa Cum Laude with a bachelor's degree in civil engineering and 
+                        planned to attend Stanford University for my master's in structural engineering. That all 
+                        changed, however, the following summer when I fell in love with coding while taking Harvard's 
+                        CS50 for fun. I decided to dive head first into the world of software development by forgoing 
+                        grad school (at least for structural engineering), quitting my engineering job, and beginning 
+                        my path to become a "self-taught" software developer.
+                    </p>
+                </div>
+                <button class="read-more dark-button"></button>
             </div>
         </div>
+        <!-- Script for Read More/Read Less -->
+        <script>
+            var coll = document.getElementsByClassName("read-more");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("read-less");
+                var content = this.previousElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
 
         <!-- Skills -->
         <div class="background-container light text-align-center" id="skills">

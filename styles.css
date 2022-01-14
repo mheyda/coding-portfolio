@@ -178,6 +178,24 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+.more-about-me {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.read-more {
+    margin-left: auto;
+    margin-right: auto;
+}
+.read-more:after {
+    content: 'Read More';
+}
+.read-less:after {
+    content: "Read Less";
+}
+.read-less:focus, .read-more:focus {
+    outline: none;
+}
 
 /* Projects section */
 .project-description {
