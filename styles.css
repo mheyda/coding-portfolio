@@ -46,7 +46,7 @@ h2 {
     text-decoration: none;
 }
 .plain-text-link {
-    color: #0645AD;
+    color: #006de2;
 }
 .plain-text-link:hover {
     text-decoration: underline;
@@ -159,7 +159,7 @@ h2 {
     font-size: 1.2rem;
     margin: 0;
 }
-.navbar-brand h6 {
+.navbar-brand{
     font-size: 1rem;
     margin: 0;
 }
@@ -173,8 +173,7 @@ h2 {
 }
 hr {
     border-top: 3px solid var(--accentlight);
-    width: 60vw;
-    max-width: 20rem;
+    width: 12rem;
     margin-top: 0.1rem;
     margin-bottom: 0.3rem;
 }
@@ -248,6 +247,9 @@ hr {
 .certificates-col {
     margin: auto;
 }
+.certificates-title {
+    font-size: 1.4rem;
+}
 .certificates-content {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: var(--neutrallight);
@@ -301,10 +303,11 @@ footer {
     .navbar-brand h4 {
         font-size: 2rem;
     }
-    .navbar-brand h6 {
+    .navbar-brand{
         font-size: 1.5rem;
     }
     hr {
+        width: 20rem;
         margin-top: 0.4rem;
         margin-bottom: 0.4rem;
     }
