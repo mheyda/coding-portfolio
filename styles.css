@@ -45,6 +45,12 @@ h2 {
     color: inherit;
     text-decoration: none;
 }
+.plain-text-link {
+    color: #0645AD;
+}
+.plain-text-link:hover {
+    text-decoration: underline;
+}
 .dark-text-link {
     color: var(--neutraldark);
 }
