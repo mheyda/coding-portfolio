@@ -1,10 +1,22 @@
+@font-face {
+    font-family: Helvetica, Arial, sans-serif;
+    src: local(Helvetica), url("Helvetica.tff") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-size: 1em;
+}
+
+
 /* Main */
 html, body {
     scroll-behavior: smooth;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    
     overflow-x: hidden;
     background-color: var(--neutrallight);
+}
+h2 {
+    padding-bottom: 1rem;
 }
 h2 {
     padding-bottom: 1rem;
@@ -194,6 +206,7 @@ hr {
 .read-more {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
 }
 .read-more:after {
     content: 'Read More';
@@ -257,7 +270,7 @@ hr {
     padding: 1rem;
 }
 .certificates-image {
-    height: 2rem;
+    height: 32px;
     text-align: left;
     margin-bottom: 0.5rem;
 }
@@ -312,7 +325,7 @@ footer {
         margin-bottom: 0.4rem;
     }
     .certificates-image {
-        height: 3.5rem;
+        height: 55px;
     }
 }
 @media (min-width: 768px) {

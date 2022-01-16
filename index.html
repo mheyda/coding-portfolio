@@ -11,17 +11,14 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <!-- Add icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <!-- Link to styles sheet -->
         <link rel="stylesheet" href="styles.css">
 
-        <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/a7e713de55.js" crossorigin="anonymous"></script>
-
         <!-- Browser Icon -->
         <link href="https://api.iconify.design/vs/m-square.svg?color=%232A3132" rel="icon">
+
+        <!-- Preload web fonts -->
+        <link rel="preload" as="font">
 
         <title>Marshall's Portfolio</title>
     </head>
@@ -57,7 +54,7 @@
         <div class="background-container" id="about">
             <div class="row no-gutters content-container light text-align-justify">
                 <div class="col-md-16 col-lg-4 left-half-container text-align-center">
-                    <img src="photos/Coding Headshot Avatar.jpg" class="self-portrait img-fluid text-padding-right" alt="Portrait of Marshall">
+                    <img src="photos/Coding Headshot Avatar.webp" class="self-portrait img-fluid text-padding-right" alt="Portrait of Marshall">
                 </div>
                 <div class="col-md-16 col-lg-8 right-half-container">
                     <div class="about-me text-padding-left text-align-center">
@@ -95,27 +92,25 @@
                     myself software development full time. When I'm not coding, you can find me hiking a trail, 
                     snapping photos in the city, or taste-testing IPAs at a local brewery.
                 </div>
-                <button class="read-more dark-button"></button>
+                <button class="read-more dark-button" id="read-more" aria-label="Read More"></button>
             </div>
         </div>
         <!-- Script for Read More/Read Less -->
         <script>
-            var coll = document.getElementsByClassName("read-more");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
+            var readMore = document.getElementById("read-more");
+
+                readMore.addEventListener("click", function() {
                 this.classList.toggle("read-less");
                 var content = this.previousElementSibling;
                 if (content.style.maxHeight){
                   content.style.maxHeight = null;
+                  this.ariaLabel = "Read More";
                 } else {
                   content.style.maxHeight = content.scrollHeight + "px";
+                  this.ariaLabel = "Read Less";
                 } 
-              });
-            }
+                });
         </script>
-
         <!-- Skills -->
         <div class="background-container light text-align-center" id="skills">
             <div class="content-container gray">
@@ -177,7 +172,7 @@
                 <!-- First project -->
                 <div class="row align-items-center no-gutters odd">
                     <div class="col-md-16 col-lg-6">
-                        <img src="photos/Wiki Cover Photo.jpg" class="img-fluid project-photos" alt="Wiki Application">
+                        <img src="photos/Wiki Cover Photo.webp" class="img-fluid project-photos" alt="Wiki Application">
                     </div>
                     <div class="col-md-12 col-lg-6">
                         <div class="project-description text-padding-left">
@@ -205,17 +200,17 @@
                             <p class="text-align-justify">(in progress)
                             </p>
                             <a href="https://github.com/mheyda/photography-site" target="_blank" rel="noreferrer" class="dark-button">Github Repo</a>
-                            <a href="www.marshallcodes.com" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
+                            <a href="https://marshallcodes.com" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
-                        <img src="photos/Photo Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall's Photography Portfolio">
+                        <img src="photos/Photo Site Cover Photo.webp" class="img-fluid project-photos" alt="Marshall's Photography Portfolio">
                     </div>
                 </div>
                 <!-- Third Project -->
                 <div class="row align-items-center no-gutters odd">
                     <div class="col-md-16 col-lg-6">
-                        <img src="photos/Portfolio Site Cover Photo.jpg" class="img-fluid project-photos" alt="Marshall's Coding Portfolio">
+                        <img src="photos/Portfolio Site Cover Photo.webp" class="img-fluid project-photos" alt="Marshall's Coding Portfolio">
                     </div>
                     <div class="col-md-12 col-lg-6">
                         <div class="project-description text-padding-left">
@@ -241,7 +236,7 @@
                 <div class="row align-items-center no-gutters certificates">
                     <div class="col-sm-12 col-lg-6 certificates-col">
                         <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="photos/gtpe-logo.png" alt="Georgia Tech Professional Education Logo">
+                            <img class="certificates-image" src="photos/gtpe-logo.webp" alt="Georgia Tech Professional Education Logo">
                             <h3 class="text-align-left certificates-title"><b>Data Structures & Algorithms</b></h3>
                             <span>
                                 <a href="https://courses.edx.org/certificates/b57155fcfc2d4796869efe02869a084c" target="_blank" rel="noreferrer" class="plain-text-link">Part I:</a>
@@ -263,7 +258,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6 certificates-col">
                         <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="photos/gtpe-logo.png" alt="Georgia Tech Professional Education Logo">
+                            <img class="certificates-image" src="photos/gtpe-logo.webp" alt="Georgia Tech Professional Education Logo">
                             <h3 class="text-align-left certificates-title"><b>Introduction to Object-Oriented Programming with Java</b></h3>
                             <span>
                                 <a href="https://courses.edx.org/certificates/56cea7eba7f04c4b8c0173c1d838bef5" target="_blank" rel="noreferrer" class="plain-text-link">Part I:</a>
@@ -281,7 +276,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6 certificates-col">
                         <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="photos/harvard-logo.png" alt="Harvard University Logo">
+                            <img class="certificates-image" src="photos/harvard-logo.webp" alt="Harvard University Logo">
                             <h3 class="text-align-left certificates-title"><b>CS50: Introduction to Computer Science</b></h3>
                             <span>
                                 <a href="https://certificates.cs50.io/bc6807c5-38ad-4848-a239-ba20617aabed" target="_blank" rel="noreferrer" class="plain-text-link">View Certificate</a>
@@ -327,20 +322,17 @@
                 </div>
             </div>
             <div class="copyright dark">
-                © Marshall Heyda
+                © Marshall Heyda <span id="year"></span>. All rights reserved.
                 <script>
-                    var year = new Date().getFullYear()
-                    document.write(year)
-                </script>.
-                All rights reserved.
+                    var date = new Date().getFullYear();
+                    document.getElementById("year").innerHTML = date;
+                </script>
             </div>
         </footer>
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/a7e713de55.js" crossorigin="anonymous"></script>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Iconify library -->
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     </body>
 </html>
