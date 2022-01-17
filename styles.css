@@ -35,7 +35,7 @@ h2 {
 :root {
     --neutrallight: #F7F7F7;
     --neutralgray: #EBEBEB;
-    --accentlight: #90AFC5;
+    --accentlight: #EC9755;
     --accentdark: #336B87;
     --neutraldark: #2A3132;
 }
@@ -102,7 +102,7 @@ h2 {
     border: 1px solid var(--neutrallight);
 }
 .light-button {
-    color: var(--neutrallight);
+    color: var(--neutraldark);
     background-color: var(--accentlight);
     border: 1px solid var(--neutraldark);
     text-decoration: none;
@@ -181,6 +181,7 @@ h2 {
     padding-top: 1rem;
 }
 hr {
+    color: var(--accentlight);
     border-top: 3px solid var(--accentlight);
     width: 12rem;
     opacity: 1;
@@ -216,6 +217,13 @@ hr {
 }
 .read-less:focus, .read-more:focus {
     outline: none;
+    color: var(--neutrallight);
+    background-color: var(--accentlight);
+}
+.read-less:focus:hover, .read-more:focus:hover {
+    outline: none;
+    color: var(--neutraldark);
+    background-color: var(--neutrallight);
 }
 
 /* Projects section */
