@@ -216,8 +216,7 @@ hr {
     content: "Read Less";
 }
 .read-less:focus, .read-more:focus {
-    outline: none;
-    color: var(--neutrallight);
+    color: var(--neutraldark);
     background-color: var(--accentlight);
 }
 .read-less:focus:hover, .read-more:focus:hover {
