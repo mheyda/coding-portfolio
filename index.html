@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         
         <!-- Link to styles sheet -->
         <link rel="stylesheet" href="styles.css">
@@ -32,18 +32,18 @@
                         <hr>
                         Front-End Developer
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span>
                             <i class="fas fa-bars"></i>
                         </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav text-align-center">
-                            <a class="nav-item nav-link light-text-link" href="#about">About</a>
-                            <a class="nav-item nav-link light-text-link" href="#skills">Skills</a>
-                            <a class="nav-item nav-link light-text-link" href="#projects">Projects</a>
-                            <a class="nav-item nav-link light-text-link" href="#certificates">Certificates</a>
-                            <a class="nav-item nav-link light-text-link" href="#contact">Contact</a>
+                            <a class="nav-link light-text-link" href="#about">About</a>
+                            <a class="nav-link light-text-link" href="#skills">Skills</a>
+                            <a class="nav-link light-text-link" href="#projects">Projects</a>
+                            <a class="nav-link light-text-link" href="#certificates">Certificates</a>
+                            <a class="nav-link light-text-link" href="#contact">Contact</a>
                         </div>
                     </div>
                 </nav>
@@ -62,7 +62,7 @@
                         <h3 class="text-align-left">Thanks for visiting. Here's a little bit about me:</h3>
                         <p class="text-align-justify">
                             <ul class="text-align-left">
-                                <li>Self-taught developer with a knack for figuring things out</li>
+                                <li>Self-taught developer with a knack for problem solving</li>
                                 <li>Former civil engineer passionate about building and creating</li>
                                 <li>Lifelong learner curious about how and why technology works</li>
                                 <li>Proud community college and Auburn University alumnus</li>
@@ -92,7 +92,7 @@
                     myself software development full time. When I'm not coding, you can find me hiking a trail, 
                     snapping photos in the city, or taste-testing IPAs at a local brewery.
                 </div>
-                <button class="read-more dark-button" id="read-more" aria-label="Read More"></button>
+                <button class="read-more light-button" id="read-more" aria-label="Read More"></button>
             </div>
         </div>
         <!-- Script for Read More/Read Less -->
@@ -116,47 +116,47 @@
             <div class="content-container gray">
                 <h2 class="dark-heading">Skills</h2>
                 <div class="row align-items-center no-gutters skills-content">
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-bootstrap light-icon skills-icon"></i>
                         <br>
                         Bootstrap
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-css3-alt light-icon skills-icon"></i>
                         <br>
                         CSS
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <span class="iconify light-icon skills-icon" data-icon="simple-icons:django"></span>
                         <br>
                         Django
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-git-alt light-icon skills-icon"></i>
                         <br>
                         git
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-html5 light-icon skills-icon"></i>
                         <br>
                         HTML
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-java light-icon skills-icon"></i>
                         <br>
                         Java
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-js-square light-icon skills-icon"></i>
                         <br>
                         JavaScript
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <i class="fab fa-python light-icon skills-icon"></i>
                         <br>
                         Python
                     </div>
-                    <div class="col-sm-2 col-md-1 skills-col">
+                    <div class="col-sm-1 skills-col">
                         <span class="iconify light-icon skills-icon" data-icon="akar-icons:vscode-fill"></span>
                         <br>
                         VS Code
@@ -187,8 +187,8 @@
                                 The app is deployed on Heroku, where a live demo version can be viewed.
                                 Note: functionality has intentionally been limited for the demo.
                             </p>
-                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" rel="noreferrer" class="dark-button">Github Repo</a>
-                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
+                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" rel="noreferrer" class="light-button">Github Repo</a>
+                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -199,8 +199,8 @@
                             <h3>Photography Portfolio</h3>
                             <p class="text-align-justify">(in progress)
                             </p>
-                            <a href="https://github.com/mheyda/photography-site" target="_blank" rel="noreferrer" class="dark-button">Github Repo</a>
-                            <a href="https://marshallcodes.com" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
+                            <a href="https://github.com/mheyda/photography-site" target="_blank" rel="noreferrer" class="light-button">Github Repo</a>
+                            <a href="https://marshallcodes.com" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
@@ -222,7 +222,7 @@
                                 design revisions and lots of code refactoring, I finally arrived at a fully responsive and accessible
                                 website to showcase my efforts. Hope you're enjoying it!
                             </p>
-                            <a href="https://github.com/mheyda/Portfolio-Site" target="_blank" rel="noreferrer" class="dark-button">Github Repo</a>
+                            <a href="https://github.com/mheyda/Portfolio-Site" target="_blank" rel="noreferrer" class="light-button">Github Repo</a>
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                     </p>
                     <br>
                     <p>
-                        <a class="light-button" href="mailto:marshallheyda@gmail.com">Send Me an Email</a>
+                        <a class="dark-button" href="mailto:marshallheyda@gmail.com">Send Me an Email</a>
                     </p>
                     <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" aria-label="Marshall's LinkedIn" rel="noreferrer" class="light-icon-link">
                         <i class="fa fa-linkedin footer-icon" aria-hidden="true"></i>
@@ -337,9 +337,7 @@
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
 </html>
