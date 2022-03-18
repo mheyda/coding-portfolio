@@ -261,8 +261,8 @@ h2 {
 /* Certificates section */
 .certificates {
     display: flex;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 .certificates-col {
     margin: auto;
@@ -326,7 +326,7 @@ footer {
 }
 @media (min-width: 768px) {
     .project-photos {
-        width: 70%;
+        width: 60%;
     }
 }
 @media (min-width: 992px) {
@@ -365,7 +365,8 @@ footer {
         width: 100%;
     }
     .project-description {
-        text-align: justify;
+        text-align: center;
+        padding-bottom: 1rem;
     }
     .certificates-content {
         height: 17rem;
