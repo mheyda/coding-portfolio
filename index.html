@@ -3,14 +3,13 @@
     <head>
         <!-- Meta Tags -->
         <meta charset="UTF-8">
-        <meta name="description" content="Marshall Heyda's Coding Portfolio">
         <meta name="keywords" content="HTML, CSS, JavaScript, Django, Java, git, Bootstrap, Python, Self-Taught, Engineer">
         <meta name="author" content="Marshall Heyda">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <meta name="title" property="og:title" content="Marshall's Coding Portfolio" />
         <meta property="og:type" content="Website" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/h9M8Tfv/Portfolio-Site-Cover-Photo.jpg" />
+        <meta name="image" property="og:image" content="" />
         <meta name="description" property="og:description" content="Marshall's Coding Portfolio" />
 
         <!-- Bootstrap CSS -->
@@ -64,15 +63,14 @@
                         <h2 class="light-heading">Hi, I'm Marshall!</h2>
                         <h3 class="text-align-left">Thanks for visiting. Here's a little bit about me:</h3>
                         <p class="text-align-justify">
-                            I am a self-taught <strong>Frontend Engineer</strong> focused on <strong>JavaScript</strong>, 
+                            I am a self-taught <strong>Frontend Engineer</strong> focused on <strong>JavaScript (React)</strong>, 
                             <strong>HTML</strong>, and <strong>CSS</strong>. Prior to learning software development, 
                             I was a civil engineer where I learned how to problem solve effectively and developed a 
-                            passion for learning. My current studies are driven by my mission to shape the future of 
-                            technology to benefit people from all backgrounds and my curiosity for how and why technology 
-                            works.
+                            passion for learning. My current studies are driven by my curiosity for how and why technology 
+                            works and my mission to shape the future of technology to benefit people from all backgrounds.
                             <br>
                             <br>
-                            <strong>Fun Facts: </strong>I have a love for travel photography, and I ran my first (and only) marathon in 2020.
+                            <strong>Fun Facts: </strong>I have a love for travel photography, and I ran my first marathon in 2020.
                         </p>
                     </div>
                 </div>
@@ -174,7 +172,32 @@
         <div class="background-container text-align-center" id="projects">
             <div class="content-container projects light">
                 <h2 class="light-heading">Projects</h2>
-                <!-- First project -->
+                <!-- First Project-->
+                <div class="row align-items-center no-gutters even">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
+                            <h3>List Maker Application</h3>
+                            <p class="text-align-justify">
+                                As someone who constantly makes lists—whether it's a to-do list, grocery list, or trip checklist—I 
+                                wanted to build a web application for this purpose. The end result is a classic CRUD application for
+                                making checklists built with <strong>React</strong> and <strong>CSS</strong> that allows users to sort 
+                                and filter their lists based on desired criteria. 
+                            </p>
+                            <p class="text-align-justify">
+                                The greatest challenge I faced while building my first React project was learning how to properly update 
+                                state variables using hooks. At times I struggled to understand why certain components were not re-rendering 
+                                when I expected them to, but I learned a lot and gained confidence as I progressed through the project.
+                            </p>
+                            <a href="https://github.com/mheyda/marshalls-list-maker" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-list-maker.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
+                    </div>
+                </div>
+
+                <!-- Second project -->
                 <div class="row align-items-center no-gutters odd">
                     <div class="col-md-12 col-lg-6">
                         <img src="photos/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
@@ -183,11 +206,12 @@
                         <div class="project-description">
                             <h3>Photography Ecommerce Application</h3>
                             <p class="text-align-justify">
-                                As a hobbyist photographer, I wanted to practice my frontend engineering skills by developing 
+                                Being a hobbyist photographer, I wanted to practice my frontend skills by developing 
                                 a simple and fully responsive ecommerce site for photography prints. I opted to use vanilla 
                                 <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong> with the intention 
                                 of preparing myself to learn a frontend framework.
-                                <br><br>
+                            </p>
+                            <p class="text-align-justify">
                                 Overall, the site acts as a photographer's portfolio, but the main focus is the "Shop" tab. 
                                 Users are afforded a full shopping experience, including viewing products in detail, adding 
                                 items to their shopping cart, and reviewing their purchase through a checkout process (without 
@@ -201,7 +225,7 @@
                     </div>
                 </div>
 
-                <!-- Second Project-->
+                <!-- Third Project-->
                 <div class="row align-items-center no-gutters even">
                     <div class="col-md-12 col-lg-6">
                         <div class="project-description">
@@ -223,27 +247,7 @@
                         <img src="photos/Wiki Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
                     </div>
                 </div>
-
-                <!-- Third Project 
-                <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-16 col-lg-6">
-                        <img src="photos/Portfolio Site Cover Photo.webp" class="img-fluid project-photos" alt="Marshall's Coding Portfolio">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Coding Portfolio</h3>
-                            <p class="text-align-justify">
-                                My personal coding portfolio (this website) was built from scratch using <b>HTML</b>, <b>CSS</b>, 
-                                <b>JavaScript</b>, and <b>Bootstrap</b>. For design inspiration, I started by creating a mock-up 
-                                site on Wix.com and began building my portfolio to match the desired layout. After multiple 
-                                design revisions and lots of code refactoring, the current version is optimized for performance, 
-                                accessibility, search, and responsiveness. Hope you're enjoying it!
-                            </p>
-                            <a href="https://github.com/mheyda/Portfolio-Site" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-                -->
+                
             </div>
         </div>
 
