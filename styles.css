@@ -236,8 +236,6 @@ h2 {
 }
 .skills-icon:hover {
     color: var(--accentlight);
-    font-size: 4rem;
-    margin-top: -1rem;
 }
 .iconify {
     font-size: 2.6rem;
@@ -351,15 +349,15 @@ footer {
     .about-me h2 {
         text-align: left;
     }
-    .skills-col {
-        width: 1vw;
-    }
     .self-portrait {
         width: auto;
         height: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .skills-col {
+        width: 10rem;
     }
     .projects {
         padding-bottom: 2.5rem;
@@ -372,7 +370,7 @@ footer {
         padding-bottom: 1rem;
     }
     .certificates-content {
-        height: 17rem;
+        height: 16rem;
     }
     .footer-flex {
         display: flex;
