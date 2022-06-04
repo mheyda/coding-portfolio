@@ -78,25 +78,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="more-about-me text-align-justify">
-                    <br>
-                    <br>
-                    <h3>My full story:</h3>
-                    I'm a Midwest boy born and raised in Minnesota who loved math and science growing up, so it was only 
-                    natural that I wanted to be an engineer. After high school I continued my formal education at 
-                    community college where I won the award for the top mathematics student of the year. 
-                    From there, I transferred to Auburn University for civil engineering where I led 
-                    multiple student organizations, participated in research and teaching, and completed several 
-                    internships. I graduated in May 2021 and planned to attend Stanford University for a master's in 
-                    structural engineering, however, I had second thoughts about my career path during my internship 
-                    the following summer. I chose to dip my toes into the world of computer science by taking 
-                    Harvard's CS50 and absolutely loved it, so I decided to start teaching myself front-end web development 
-                    full time. Nine months into my independent studies I was accepted to Georgia Tech, where I plan to 
-                    complete a master's degree in computer science part-time while simultaneously working as a frontend engineer.
-                    When I'm not coding, you can find me hiking a trail, snapping photos, or taste-testing 
-                    IPAs at a local brewery.
-                </div>
-                <button class="read-more dark-button" id="read-more" aria-label="Read More"></button>
             </div>
         </div>
         <!-- Script for Read More/Read Less -->
@@ -192,11 +173,45 @@
                 <div class="row align-items-center no-gutters even">
                     <div class="col-md-12 col-lg-6">
                         <div class="project-description">
+                            <h3>Photography Ecommerce Application</h3>
+                            <p><strong>React, Redux, HTML, CSS, and JSON</strong></p>
+                            <p class="text-align-justify">
+                                As a hobbyist photographer, I wanted to practice my frontend skills by developing 
+                                a simple and fully responsive ecommerce app from scratch for photography prints. 
+                                The project was originally built with plain JavaScript, HTML, and CSS, but was 
+                                later converted into a React and Redux application for better organization and maintainability.
+                            </p>
+                            <p class="text-align-justify">
+                                The app provides users a full shopping experience, allowing them to adjust their cart at every 
+                                step along the way. Primary functionality is listed below.
+                                <ul class="text-align-left">
+                                    <li>Add, update, and remove items from cart</li>
+                                    <li>Pull product data from a local JSON file</li>
+                                    <li>Image carousel and modal box for users to view all images for a product</li>
+                                </ul>
+                            </p>
+                            <a href="https://github.com/mheyda/print-store" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-print-store.netlify.app" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="photos/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
+                    </div>
+                </div>
+
+                <!-- Second project -->
+                <div class="row align-items-center no-gutters odd">
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
                             <h3>List Maker Application</h3>
+                            <p><strong>React, HTML, and CSS</strong></p>
                             <p class="text-align-justify">
                                 As someone who constantly makes lists—whether it's a to-do list, grocery list, or trip checklist—I 
                                 wanted to build a web application for this purpose. The end result is a classic CRUD application for
-                                making checklists built with <strong>React</strong> and <strong>CSS</strong> that allows users to sort 
+                                making checklists built with React and CSS that allows users to sort 
                                 and filter their lists based on desired criteria. 
                             </p>
                             <p class="text-align-justify">
@@ -208,37 +223,6 @@
                             <a href="https://mheyda-list-maker.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
                         </div>
                     </div>
-                    <div class="col-md-16 col-lg-6">
-                        <img src="photos/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
-                    </div>
-                </div>
-
-                <!-- Second project -->
-                <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-12 col-lg-6">
-                        <img src="photos/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Photography Ecommerce Application</h3>
-                            <p class="text-align-justify">
-                                Being a hobbyist photographer, I wanted to practice my frontend skills by developing 
-                                a simple and fully responsive ecommerce site for photography prints. I opted to use vanilla 
-                                <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong> with the intention 
-                                of preparing myself to learn a frontend framework.
-                            </p>
-                            <p class="text-align-justify">
-                                Overall, the site acts as a photographer's portfolio, but the main focus is the "Shop" tab. 
-                                Users are afforded a full shopping experience, including viewing products in detail, adding 
-                                items to their shopping cart, and reviewing their purchase through a checkout process (without 
-                                actually handling payments). Since no backend was used, a local JSON file serves as a database 
-                                alternative, allowing for quick and easy updates to product information when necessary. To read 
-                                more, click the GitHub link below!
-                            </p>
-                            <a href="https://github.com/mheyda/print-store" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-print-store.netlify.app/templates/shop.html" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Third Project-->
@@ -246,9 +230,9 @@
                     <div class="col-md-12 col-lg-6">
                         <div class="project-description">
                             <h3>Wiki Application</h3>
-                            <p class="text-align-justify">A wiki-style CRUD application made with <strong>Django</strong> using 
-                                <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and a *hint* of 
-                                <strong>JavaScript</strong>. Functionality includes viewing, creating, editing, and deleting 
+                            <p><strong>Python (Django), HTML, and CSS</strong></p>
+                            <p class="text-align-justify">A wiki-style CRUD application made with Django using 
+                                Python, HTML, and CSS. Functionality includes viewing, creating, editing, and deleting 
                                 wiki entries, searching for entries, and selecting a page at random. 
                                 <br>
                                 <br>
