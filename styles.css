@@ -2,7 +2,7 @@
 /* Main */
 html, body {
     scroll-behavior: smooth;
-    
+    box-sizing: border-box;
     overflow-x: hidden;
     background-color: var(--neutrallight);
 }
@@ -397,4 +397,10 @@ footer {
         width: 1150px;
         margin: auto;
     }
+}
+
+
+
+.row > img {
+    padding-left: 0;
 }

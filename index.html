@@ -171,19 +171,18 @@
                             <h3>National Park Explorer</h3>
                             <p><strong>React, Redux, Django, HTML, and CSS</strong></p>
                             <p class="text-align-justify">
-                                Knowing the mental and physical benefits of getting outside and exploring, I wanted to develop 
+                                Knowing the mental and physical benefits of getting outside, I wanted to develop 
                                 a web app that would allow people to get inspired by America's national parks. 
                                 The app consumes three REST APIs from the National Park Service, OpenWeatherMap, and Leaflet 
-                                to display relevant park data in list and map format, while the Django backend allows 
-                                users to submit CRUD operations and API keys to be kept hidden. Current and forecasted 
-                                weather data is also provided 
-                                for each park location. 
+                                to display park information and weather data in both list and map format. Users can also 
+                                search, filter, and sort the parks depending on their preferences.
                             </p>
                             <p class="text-align-justify">
-                                The biggest ongoing challenge of this project is improving the performance, specifically 
-                                when loading park data and images. Solutions that have already been utilized are lazy-loading 
-                                images, splitting the park list into separate pages, and saving park data to local storage 
-                                to prevent unnecessary repeated API calls.
+                                The biggest challenge I faced was improving the performance of this image-heavy application. 
+                                Since all data was loaded from outside sources, I had no control over the size or resolution of the 
+                                images. Instead, I opted to lazy-load images using the 
+                                <a class="plain-text-link" href="https://www.npmjs.com/package/react-intersection-observer" target="_blank" rel="noreferrer">React Intersection Observer</a> 
+                                and implement infinite scrolling to prevent DOM elements from being loaded until they were needed. 
                             </p>
                             <a href="https://github.com/mheyda/national-park-explorer" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
                             <a href="https://mheyda-national-park-explorer.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
@@ -205,7 +204,7 @@
                             <p><strong>React, Redux, HTML, and CSS</strong></p>
                             <p class="text-align-justify">
                                 As a hobbyist photographer, I wanted to practice my frontend skills by developing 
-                                a simple and fully responsive ecommerce app from scratch for photography prints. 
+                                a simple and fully responsive ecommerce app for photography prints. 
                                 The project was originally built with plain JavaScript, HTML, and CSS, but was 
                                 later converted into a React and Redux application for better organization and maintainability.
                             </p>
