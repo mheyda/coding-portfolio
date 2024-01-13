@@ -42,9 +42,10 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav text-align-center">
                             <a class="nav-link light-text-link" href="#about">About</a>
-                            <a class="nav-link light-text-link" href="#skills">Skills</a>
+                            <a class="nav-link light-text-link" href="#coursework">Coursework</a>
                             <a class="nav-link light-text-link" href="#projects">Projects</a>
-                            <a class="nav-link light-text-link" href="#certificates">Certificates</a>
+                            <!-- <a class="nav-link light-text-link" href="#certificates">Certificates</a> -->
+                            <a class="nav-link light-text-link" href="#skills">Skills</a>
                             <a class="nav-link light-text-link" href="#contact">Contact</a>
                         </div>
                     </div>
@@ -64,19 +65,16 @@
                         <h3 class="text-align-left">Thanks for visiting. Here's a little bit about me:</h3>
                         <ul class="text-align-left">
                             <li>
-                                I'm a software engineer currently enrolled at Georgia Tech for a master's degree in computer science
+                                I am a master's student in <strong>computer science</strong> at <strong>Georgia Tech</strong> with an expected graduation date of December 2024
                             </li>
                             <li>
-                                Through work, school, and personal projects, I'm proficient in <strong>ReactJS</strong>, 
-                                <strong>Django</strong>, <strong>PostgreSQL</strong>, and many other technologies (<a href="#skills" class="plain-text-link">see more</a>)
+                                In 2023 I interned at both <strong>Amazon</strong> and <strong>Leidos</strong>, where I gained agile software development experience in <strong>web development</strong> and <strong>big data</strong>
                             </li>
                             <li>
-                                I'm passionate about technology and am always looking for ways to improve as a developer 
+                                Through experience with internships, school, and personal projects, I'm proficient in <strong>Python</strong>, <strong>TypeScript/JavaScript</strong>, <strong>AWS</strong>, 
+                                <strong>Git</strong>, and many more technologies, including web development tools like <strong>Django</strong> and <strong>ReactJS</strong>
                             </li>
                         </ul>
-                        <p class="text-align-left">
-                            <strong>Fun Facts: </strong>I have a love for travel photography, and I ran my first marathon in 2020.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -97,11 +95,175 @@
                 } 
                 });
         </script>
+
+        <!-- Coursework -->
+        <div class="background-container light text-align-center" id="coursework">
+            <div class="content-container gray">
+                <h2 class="dark-heading">
+                    Graduate Coursework
+                    <br>
+                    <div style="font-size: 20px; padding: 0.5rem;">
+                        MSCS @ Georgia Tech
+                        <br>
+                        Expected December 2024
+                    </div>
+                </h2>
+                <div class="row align-items-start no-gutters skills-content">
+                    <a href="https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms" target="_blank" aria-label="Georgia Tech Intro to Graduate Algorithms" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon" data-icon="ph:graph-bold"></span>
+                        <br>
+                        Graduate Algorithms
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-6200-introduction-operating-systems" target="_blank" aria-label="Georgia Tech Intro to Operating Systems" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="fa:gears"></span>
+                        <br>
+                        Operating Systems
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-6290-high-performance-computer-architecture" target="_blank" aria-label="Georgia Tech High Performance Computer Architecture" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="jam:microchip"></span>
+                        <br>
+                        High Performance <br> Computer Architecture
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-6250-computer-networks" target="_blank" aria-label="Georgia Tech Computer Networks" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="mynaui:globe"></span>
+                        <br>
+                        Computer Networks
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-6035-introduction-to-information-security" target="_blank" aria-label="Georgia Tech Intro to Information Security" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="mdi:security-lock"></span>
+                        <br>
+                        Information Security
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-7646-machine-learning-trading" target="_blank" aria-label="Georgia Tech Machine Learning for Trading" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="eos-icons:machine-learning"></span>
+                        <br>
+                        Machine Learning for Trading
+                    </a>
+                    <a href="https://omscs.gatech.edu/cs-7638-robotics-ai-techniques" target="_blank" aria-label="Georgia Tech Robotics: AI Techniques" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
+                        <span class="iconify light-icon skills-icon" data-icon="mdi:head-cog"></span>
+                        <br>
+                        Robotics: AI Techniques
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="background-container text-align-center" id="projects">
+            <div class="content-container projects light">
+                <h2 class="light-heading">Personal Projects</h2>
+                <!-- First Project-->
+                <div class="row align-items-center no-gutters even">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
+                            <h3>National Park Explorer</h3>
+                            <p><strong>React, Redux, Django, PostgreSQL, HTML, and CSS</strong></p>
+                            <p class="text-align-justify">
+                                Knowing the mental and physical benefits of getting outside, I wanted to develop a web app that would 
+                                allow people to get inspired by America's national parks. This fully responsive full-stack web app consumes 
+                                three REST APIs from the 
+                                National Park Service, OpenWeatherMap, and Leaflet to display information and weather data about 
+                                national parks in both list and map format. Parks can be searched for, sorted, and filtered by multiple 
+                                criteria so users can find parks more relevant to their interests. Additionally, to make the app more 
+                                personalized, users can also sign up for an account to save their favorite parks to their profile for 
+                                future reference.
+                            </p>
+                            <a href="https://github.com/mheyda/national-park-explorer" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-national-park-explorer.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="editing-images/National Park Explorer Cover Image Square.jpg" class="img-fluid project-photos" alt="Screenshot of National Park Explorer Application Map">
+                    </div>
+                </div>
+
+                <!-- Second Project-->
+                <div class="row align-items-center no-gutters odd">
+                    <div class="col-md-12 col-lg-6">
+                        <img src="photos/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
+                            <h3>Photography Ecommerce</h3>
+                            <p><strong>React, Redux, HTML, and CSS</strong></p>
+                            <p class="text-align-justify">
+                                As a hobbyist photographer, I wanted to practice my frontend skills by developing 
+                                a simple and fully responsive ecommerce app for photography prints. 
+                                The project was originally built with plain JavaScript, HTML, and CSS, but was 
+                                later converted into a React and Redux application for better organization and maintainability.
+                            </p>
+                            <p class="text-align-justify">
+                                The app provides users a full shopping experience, allowing them to adjust their cart at every 
+                                step along the way. Primary functionality is listed below.
+                                <ul class="text-align-left">
+                                    <li>Add, update, and remove items from cart</li>
+                                    <li>Pull product data from a local JSON file</li>
+                                    <li>Image carousel and modal box for users to view all images for a product</li>
+                                </ul>
+                            </p>
+                            <a href="https://github.com/mheyda/print-store" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-print-store.netlify.app" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third project -->
+                <div class="row align-items-center no-gutters even">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
+                            <h3>List Maker</h3>
+                            <p><strong>React, HTML, and CSS</strong></p>
+                            <p class="text-align-justify">
+                                As someone who constantly makes lists—whether it's a to-do list, grocery list, or trip checklist—I 
+                                wanted to build a web application for this purpose. The end result is a classic CRUD application for
+                                making checklists built with React, HTML, and CSS that allows users to sort 
+                                and filter their lists based on desired criteria. 
+                            </p>
+                            <p class="text-align-justify">
+                                The greatest challenge I faced while building my first React project was learning how to properly update 
+                                state variables using hooks. At times I struggled to understand why certain components were not re-rendering 
+                                when I expected them to, but I learned a lot and gained confidence as I progressed through the project.
+                            </p>
+                            <a href="https://github.com/mheyda/marshalls-list-maker" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-list-maker.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
+                    </div>
+                </div>
+
+                <!-- Fourth Project-->
+                <div class="row align-items-center no-gutters odd">
+                    <div class="col-md-16 col-lg-6">
+                        <img src="photos/Wiki Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="project-description">
+                            <h3>Wiki App</h3>
+                            <p><strong>Python/Django, HTML, and CSS</strong></p>
+                            <p class="text-align-justify">A wiki-style CRUD application made with Django using 
+                                Python, HTML, and CSS. Functionality includes viewing, creating, editing, and deleting 
+                                wiki entries, searching for entries, and selecting a page at random. 
+                                <br>
+                                <br>
+                                The app is deployed on Heroku where a live demo version can be viewed.
+                                Note: functionality has intentionally been limited for the demo.
+                            </p>
+                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
+                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
         <!-- Skills -->
         <div class="background-container light text-align-center" id="skills">
             <div class="content-container gray">
                 <h2 class="dark-heading">Skills</h2>
-                <div class="row align-items-center no-gutters skills-content">
+                <div class="row align-items-start no-gutters skills-content">
                     <div class="col-sm-1 skills-col">
                         <i class="fab fa-bootstrap light-icon skills-icon"></i>
                         <br>
@@ -246,118 +408,8 @@
             </div>
         </div>
 
-        <!-- Projects -->
-        <div class="background-container text-align-center" id="projects">
-            <div class="content-container projects light">
-                <h2 class="light-heading">Projects</h2>
-                <!-- First Project-->
-                <div class="row align-items-center no-gutters even">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>National Park Explorer</h3>
-                            <p><strong>React, Redux, Django, PostgreSQL, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                Knowing the mental and physical benefits of getting outside, I wanted to develop a web app that would 
-                                allow people to get inspired by America's national parks. This fully responsive full-stack web app consumes 
-                                three REST APIs from the 
-                                National Park Service, OpenWeatherMap, and Leaflet to display information and weather data about 
-                                national parks in both list and map format. Parks can be searched for, sorted, and filtered by multiple 
-                                criteria so users can find parks more relevant to their interests. Additionally, to make the app more 
-                                personalized, users can also sign up for an account to save their favorite parks to their profile for 
-                                future reference.
-                            </p>
-                            <a href="https://github.com/mheyda/national-park-explorer" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-national-park-explorer.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <img src="editing-images/National Park Explorer Cover Image Square.jpg" class="img-fluid project-photos" alt="Screenshot of National Park Explorer Application Map">
-                    </div>
-                </div>
-
-                <!-- Second Project-->
-                <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-12 col-lg-6">
-                        <img src="photos/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Photography Ecommerce</h3>
-                            <p><strong>React, Redux, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                As a hobbyist photographer, I wanted to practice my frontend skills by developing 
-                                a simple and fully responsive ecommerce app for photography prints. 
-                                The project was originally built with plain JavaScript, HTML, and CSS, but was 
-                                later converted into a React and Redux application for better organization and maintainability.
-                            </p>
-                            <p class="text-align-justify">
-                                The app provides users a full shopping experience, allowing them to adjust their cart at every 
-                                step along the way. Primary functionality is listed below.
-                                <ul class="text-align-left">
-                                    <li>Add, update, and remove items from cart</li>
-                                    <li>Pull product data from a local JSON file</li>
-                                    <li>Image carousel and modal box for users to view all images for a product</li>
-                                </ul>
-                            </p>
-                            <a href="https://github.com/mheyda/print-store" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-print-store.netlify.app" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third project -->
-                <div class="row align-items-center no-gutters even">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>List Maker</h3>
-                            <p><strong>React, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                As someone who constantly makes lists—whether it's a to-do list, grocery list, or trip checklist—I 
-                                wanted to build a web application for this purpose. The end result is a classic CRUD application for
-                                making checklists built with React, HTML, and CSS that allows users to sort 
-                                and filter their lists based on desired criteria. 
-                            </p>
-                            <p class="text-align-justify">
-                                The greatest challenge I faced while building my first React project was learning how to properly update 
-                                state variables using hooks. At times I struggled to understand why certain components were not re-rendering 
-                                when I expected them to, but I learned a lot and gained confidence as I progressed through the project.
-                            </p>
-                            <a href="https://github.com/mheyda/marshalls-list-maker" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-list-maker.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                    <div class="col-md-16 col-lg-6">
-                        <img src="photos/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
-                    </div>
-                </div>
-
-                <!-- Fourth Project-->
-                <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-16 col-lg-6">
-                        <img src="photos/Wiki Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Wiki App</h3>
-                            <p><strong>Python/Django, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">A wiki-style CRUD application made with Django using 
-                                Python, HTML, and CSS. Functionality includes viewing, creating, editing, and deleting 
-                                wiki entries, searching for entries, and selecting a page at random. 
-                                <br>
-                                <br>
-                                The app is deployed on Heroku where a live demo version can be viewed.
-                                Note: functionality has intentionally been limited for the demo.
-                            </p>
-                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
         <!-- Certificates -->
+        <!-- 
         <div class="background-container text-align-center" id="certificates">
             <div class="content-container gray">
                 <h2 class="dark-heading">Certificates</h2>
@@ -449,6 +501,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <!-- Footer -->
         <footer class="background-container dark text-align-center" id="contact">
@@ -472,9 +525,10 @@
                 <div class="footer-right">
                     <a class="light-text-link footer-link" href="#home">Home</a>
                     <a class="light-text-link footer-link" href="#about">About</a>
-                    <a class="light-text-link footer-link" href="#skills">Skills</a>
+                    <a class="light-text-link footer-link" href="#coursework">Coursework</a>
                     <a class="light-text-link footer-link" href="#projects">Projects</a>
-                    <a class="light-text-link footer-link" href="#certificates">Certificates</a>
+                    <!-- <a class="light-text-link footer-link" href="#certificates">Certificates</a> -->
+                    <a class="light-text-link footer-link" href="#skills">Skills</a>
                     <a class="light-text-link footer-link" href="#contact">Contact</a>
                     <br>
                 </div>

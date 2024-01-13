@@ -234,9 +234,6 @@ h2 {
 .skills-icon {
     font-size: 3rem;
 }
-.skills-icon:hover {
-    color: var(--accentlight);
-}
 .iconify {
     font-size: 2.6rem;
 }
