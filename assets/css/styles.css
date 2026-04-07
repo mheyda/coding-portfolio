@@ -1,403 +1,868 @@
-
-/* Main */
-html, body {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: var(--neutrallight);
-}
-h2 {
-    padding-bottom: 1.5rem;
-}
-
-/* Containers */
-.background-container {
-    width: 100vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.content-container {
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 2.5rem;
-    margin: 0;
-}
-.left-half-container {
-    height: fit-content;
-}
-.right-half-container {
-    height: fit-content;
-}
-
-/* Color variables */
+/* Using your brand colors */
 :root {
-    --neutrallight: #F7F7F7;
-    --neutralgray: #EBEBEB;
-    --accentlight: #A5C3CF;
-    --accentdark: #336B87;
-    --neutraldark: #2A3132;
+  --bg: #0d1117; /* Deep dark background */
+  --card-bg: #161b22; /* Widget background */
+  --border: #30363d; /* Subtle borders */
+  --accentdark: #336b87; /* Your primary blue */
+  --accentlight: #a5c3cf; /* Your secondary blue */
+  --neutralgray: #ebebeb;
+  --text-main: #c9d1d9; /* Light text */
+  --text-dim: #8b949e; /* Muted text */
+  --success: #238636; /* Online pulse green */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* --- Header --- */
+.header {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sys-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--accentlight);
+  letter-spacing: 2px;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.sys-status {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+/* --- Bento Grid --- */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(140px, auto);
+  gap: 16px;
+}
+
+.widget {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.widget:hover {
+  border-color: var(--accentdark);
+  box-shadow: 0 0 15px rgba(51, 107, 135, 0.1);
+}
+
+.label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sizes */
+.wide {
+  grid-column: span 2;
+}
+.extra-wide {
+  grid-column: span 3;
+}
+.tall {
+  grid-row: span 2;
+}
+.hero {
+  grid-column: span 2;
+  grid-row: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.hero > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* --- Components --- */
+.big-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+.sub-value {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.portrait {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accentdark);
+  object-fit: cover;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--success);
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 2s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Resource Allocation Bars */
+.bar-container {
+  margin-top: 10px;
+}
+.bar-label {
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: #eee;
+}
+.bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #30363d;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--accentdark);
+  border-radius: 3px;
+}
+
+/* Terminal Logs */
+/* Define the shared grid structure */
+.log-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* Precisely aligns columns */
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Header Specifics */
+.log-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.log-header span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accentlight);
+  letter-spacing: 1px;
+}
+
+/* Row Specifics */
+.log-row {
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.log-time {
+  color: var(--text-dim); /* Muted color for timestamps */
+}
+
+.log-event {
+  color: #fff;
+}
+
+/* Container */
+.log-container {
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Custom Scrollbar (Optional - makes it look more 'tech') */
+.log-container::-webkit-scrollbar {
+  width: 4px;
+}
+.log-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* Styling for the Expand/Collapse Arrow */
+.log-row {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.log-arrow {
+  font-size: 0.6rem;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  color: var(--text-dim);
+}
+
+/* Rotate arrow when open */
+.log-row.open .log-arrow {
+  transform: rotate(90deg);
+  color: var(--accentlight);
+}
+
+/* Hidden detail area */
+.log-details {
+  grid-column: 2; /* Aligns under the message, not the timestamp */
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    margin 0.3s ease;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  border-left: 1px solid var(--accentdark);
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+.log-row.open .log-details {
+  max-height: 200px; /* Adjust based on content size */
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* Base styling for all log tags */
+.tag-start,
+.tag-finish,
+.tag-status {
+  font-weight: bold;
+  margin-right: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* START: Green for 'Service Initialization' */
+.tag-start {
+  color: #50a86b;
+}
+
+/* FINISH: Reddish-Plum (Warm and authoritative) */
+.tag-finish {
+  color: #d7737f;
+}
+
+/* STATUS: Your Accent Blue for 'Current State' */
+.tag-status {
+  color: #70afda;
+}
+
+/* Optional: Add a 'hover' effect to rows to make them interactive */
+.log-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.log-row:focus {
+  outline: none;
+}
+
+/* 2. Apply the custom outline ONLY when tabbing (keyboard) */
+.log-row:focus-visible {
+  outline: 2px solid var(--accentlight);
+  outline-offset: -2px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Links */
-.plain-link {
-    color: inherit;
+.endpoint-link {
+  display: block;
+  padding: 10px;
+  background: #21262d;
+  border-radius: 6px;
+  color: var(--accentlight);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-family: "JetBrains Mono", monospace;
+  transition: 0.2s;
 }
-.plain-link:hover {
-    color: inherit;
-    text-decoration: none;
-}
-.plain-text-link {
-    color: #006de2;
-}
-.plain-text-link:hover {
-    color: var(--neutraldark);
-    text-decoration: none;
-}
-.dark-text-link {
-    color: var(--neutraldark);
-    text-decoration: none;
-}
-.dark-text-link:hover {
-    color: var(--accentdark);
-    text-decoration: underline;
-}
-.light-text-link {
-    color: var(--neutrallight);
-    text-decoration: none;
-}
-.light-text-link:hover {
-    color: var(--accentlight);
-    text-decoration: underline;
-}
-.dark-icon-link {
-    color: var(--neutraldark);
-    text-decoration: none;
-}
-.dark-icon-link:hover {
-    color: var(--accentdark);
-    text-decoration: none;
-}
-.light-icon-link {
-    color: var(--neutrallight);
-    text-decoration: none;
-}
-.light-icon-link:hover {
-    color: var(--accentlight);
-    text-decoration: none;
-}
-.dark-button {
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-    border: 1px solid var(--neutraldark);
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-}
-.dark-button:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: var(--neutraldark);
-    background-color: var(--neutrallight);
-    border: 1px solid var(--neutraldark);
-}
-.light-button {
-    color: var(--neutraldark);
-    background-color: var(--neutrallight);
-    border: 1px solid var(--neutraldark);
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-}
-.light-button:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-    border: 1px solid var(--neutraldark);
-}
-.accent-button {
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-    border: 1px solid var(--neutrallight);
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-}
-.accent-button:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: var(--neutraldark);
-    background-color: var(--neutrallight);
-    border: 1px solid var(--neutrallight);
+.endpoint-link:hover {
+  background: var(--accentdark);
+  color: white;
 }
 
-/* Color themes */
-.dark {
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-}
-.light {
-    color: var(--neutraldark);
-    background-color: var(--neutrallight);
-}
-.gray {
-    color: var(--neutraldark);
-    background-color: var(--neutralgray);
+/* Container for the link row */
+.hero .sub-value:last-child {
+  margin-top: 4px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  flex-wrap: wrap;
 }
 
-/* Alignment Classes */
-.text-align-center {
+/* Base link styling */
+.hero .sub-value a {
+  color: var(--accentlight);
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(165, 195, 207, 0.05); /* Very subtle tint */
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Hover state - "High-light" effect */
+.hero .sub-value a:hover {
+  background: rgba(165, 195, 207, 0.15);
+  border-color: var(--accentdark);
+  color: white;
+  box-shadow: 0 0 8px rgba(51, 107, 135, 0.2);
+}
+
+.email-obfuscated::after {
+  content: "marshallheyda" "\0040" "gmail.com";
+  color: var(--accentlight);
+}
+
+.email-obfuscated {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the raw email link from bots but keep the layout */
+.bot-shield {
+  display: none;
+}
+
+/* --- Mobile --- */
+@media (max-width: 850px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wide,
+  .hero {
+    grid-column: span 2;
+  }
+  .extra-wide {
+    grid-column: span 2;
+  }
+  .log-container {
+    max-height: 180px;
+  }
+}
+@media (max-width: 500px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .wide,
+  .hero,
+  .tall {
+    grid-column: span 1;
+  }
+  .extra-wide {
+    grid-column: span 1;
+  }
+  .hero-main {
+    flex-direction: column; /* Stack portrait over name on phones */
     text-align: center;
-}
-.text-align-justify {
-    text-align: justify;
-}
-.text-align-left {
-    text-align: left;
-}
-.text-align-right {
-    text-align: right;
+  }
+
+  .hero .sub-value:last-child {
+    justify-content: center;
+  }
 }
 
-/* -------------- Custom sections ------------------- */
-
-/* Home section */
-.home {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-.navbar-toggler {
-    border: 3px solid var(--neutrallight);
-    color: var(--neutrallight);
-    background-color: var(--neutraldark);
-    font-size: 28px;
-}
-.navbar-toggler:focus, .navbar-toggler:active {
-    outline: none;
-    border: 3px solid var(--neutrallight);
-}
-.nav-link {
-    font-size: 1.2rem;
-    transition: 0s;
-}
-.nav-link:hover {
-    color: var(--accentlight);
-}
-.navbar-brand h4{
-    font-size: 1.4rem;
-    margin: 0;
-}
-.navbar {
-    padding: 0;
-    display: flex;
-}
-
-/* About section */
-.self-portrait {
-    width: 50vw;
-    height: 50vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.more-about-me {
-    margin-bottom: 1rem;
-    margin-top: -1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-.read-more {
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-}
-.read-more:after {
-    content: 'Read More';
-}
-.read-less:after {
-    content: "Read Less";
-}
-
-/* Skills section */
-.skills-col {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    flex-grow: 1;
-    max-width: 100vw;
-    width: 7rem;
-}
-.skills-icon {
-    font-size: 3rem;
-}
-.iconify {
-    font-size: 2.6rem;
-}
-
-/* Projects section */
-.projects {
-    padding-bottom: 0;
-}
-.project-description {
-    padding-top: 1rem;
-    padding-bottom: 4rem;
-}
-.project-photos {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    padding: 0.5rem;
-    width: 100%;
-}
-.even {
-    flex-direction: column-reverse;
-}
-
-/* Certificates section */
-.certificates {
-    display: flex;
-    margin-left: 0rem;
-    margin-right: 0rem;
-}
-.certificates-col {
-    margin: auto;
-}
-.certificates-title {
-    font-size: 1.4rem;
-}
-.certificates-content {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: var(--neutrallight);
-    margin: 0.5rem;
-    padding: 1rem;
-}
-.certificates-image {
-    height: 32px;
-    text-align: left;
-    margin-bottom: 0.5rem;
-}
-
-/* Footer section */
-.footer-icon {
-    font-size: 1.4rem;
-    padding: 0.5rem;
-}
-
-footer {
-    height: fit-content;
+@media (min-width: 851px) {
+  /* The container for the logs */
+  .event-logs {
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
-}
-.footer-link {
-    width: fit-content;
-    display: block;
-    margin: auto;
-    padding: 0.5rem;
-}
-.footer-left {
-    padding-bottom: 1rem;
-}
-.footer-right {
-    border-top: 2px solid var(--neutrallight);
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 1rem;
-}
-.copyright {
-    display: block;
-    font-size: 0.9rem;
-    padding-bottom: 1rem;
+    height: 0; /* Prevents the logs from "pushing" the row taller */
+    min-height: 100%;
+  }
+
+  .log-container {
+    flex: 1;
+    overflow-y: auto; /* Scrollbar appears here */
+    min-height: 0; /* Important for flex children to allow shrinking */
+  }
+
+  /* Keep the skills widget consistent */
+  .packages-installed {
+    grid-column: span 1;
+    height: 100%;
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch; /* This forces all widgets in a row to the same height */
+  }
 }
 
-/* Responsiveness */
-@media (min-width: 576px) {
-    .navbar-brand h4 {
-        font-size: 2rem;
-    }
-    .certificates-image {
-        height: 55px;
-    }
+/* Indicators */
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
 }
-@media (min-width: 768px) {
-    .project-photos {
-        width: 60%;
-    }
+.status-green {
+  background-color: #238636;
+  box-shadow: 0 0 8px rgba(35, 134, 54, 0.4);
 }
-@media (min-width: 992px) {
-    .even {
-        flex-direction: row;
-    }
-    .text-padding-left {
-        padding-left: 1rem;
-    }
-    .text-padding-right {
-        padding-right: 1rem;
-    }
-    .navbar-nav {
-        margin-left: auto;
-    }
-    .nav-link {
-        margin-left: 2rem;
-    }
-    .about-me h2 {
-        text-align: left;
-    }
-    .self-portrait {
-        width: auto;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .skills-col {
-        width: 10rem;
-    }
-    .projects {
-        padding-bottom: 2.5rem;
-    }
-    .project-photos {
-        width: 100%;
-    }
-    .project-description {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .certificates-content {
-        height: 16rem;
-    }
-    .footer-flex {
-        display: flex;
-    }
-    .footer-link {
-        margin-left: 0;
-    }
-    .footer-left {
-        width: 60%;
-    }
-    .footer-right {
-        border-top: none;
-        border-left: 2px solid var(--neutrallight);
-        width: 40%;
-        text-align: left;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 0;
-        padding-left: 2rem;
-    }
+.status-yellow {
+  background-color: #d29922;
 }
-@media (min-width: 1200px) {
-    .content-container {
-        width: 1150px;
-        margin: auto;
-    }
+.status-red {
+  background-color: #da3633;
 }
 
+.pkg-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
 
+.pkg-grid-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-.row > img {
-    padding-left: 0;
+/* Individual Skill Brick */
+.pkg-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the dot and the text */
+  background: #30363d;
+  padding: 2px 6px; /* Uniform padding inside the brick */
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pkg-item:hover {
+  border-color: var(--accentdark);
+  background: #363c44;
+}
+
+/* Specific text styling for the bricks */
+.pkg-name {
+  font-size: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-main);
+}
+
+/* Ensure the dot stays a fixed size inside the brick */
+.pkg-item .indicator {
+  width: 8px;
+  height: 8px;
+}
+
+/* Legend Styling */
+.packages-installed .legend-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: auto; /* Pushes to bottom of widget */
+}
+.packages-installed .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.packages-installed .legend-item:last-child {
+  margin-bottom: 0;
+}
+.packages-installed .legend-text {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Desktop Layout (Default) */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Specific Widget Placements */
+.hero {
+  grid-column: span 6;
+}
+.career-uptime {
+  grid-column: span 3;
+}
+.deployment-region {
+  grid-column: span 3;
+}
+
+.packages-installed {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+.event-logs {
+  grid-column: span 8;
+}
+
+.github-activity {
+  grid-column: span 12;
+  order: 6;
+}
+
+/* Update the wrapper to allow horizontal scrolling */
+.github-activity .github-graph-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow-x: auto; /* Allow horizontal scroll */
+  padding-bottom: 10px; /* Space for the scrollbar */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Ensure the label containers don't shrink and stay aligned with the grid */
+#month-labels,
+.commit-graph-container {
+  min-width: fit-content; /* Prevent the grid from squishing */
+}
+
+/* Optional: Style the scrollbar to match your dark theme */
+.github-graph-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+.github-graph-wrapper::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+.github-graph-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+.github-graph-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--accentdark);
+}
+
+.github-activity-footer {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  color: var(--text-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+.github-activity-footer i {
+  color: var(--accentdark);
+  font-size: 12px;
+}
+
+.github-activity .legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.github-activity .legend-label {
+  margin: 0 4px;
+  font-size: 9px;
+}
+
+/* Reusing the color logic for legend squares */
+.github-activity .legend-square {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+.github-activity .legend-square.l0 {
+  background: #21262d;
+}
+.github-activity .legend-square.l1 {
+  background: #193f53;
+}
+.github-activity .legend-square.l2 {
+  background: #306782;
+}
+.github-activity .legend-square.l3 {
+  background: #4da3cb;
+}
+.github-activity .legend-square.l4 {
+  background: #a2dff8;
+}
+
+.commit-graph-container {
+  display: grid;
+  grid-template-columns: repeat(53, 15px); /* 52-53 weeks */
+  grid-template-rows: repeat(7, 15px); /* 7 days */
+  grid-auto-flow: column; /* Fill columns top-to-bottom */
+  gap: 3px;
+  padding: 0; /* Padding moved to wrapper */
+  justify-content: start;
+}
+
+.commit-day {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.commit-day:hover {
+  transform: scale(1.3);
+  z-index: 10;
+  outline: 1px solid var(--accentlight);
+}
+
+.commit-day:hover::after,
+.commit-day:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+#month-labels {
+  display: grid;
+  /* 53 columns to match the maximum number of weeks in a year */
+  grid-template-columns: repeat(53, 15px);
+  gap: 3px;
+  font-size: 9px;
+  color: var(--text-dim);
+  margin-bottom: 5px;
+  font-family: "JetBrains Mono", monospace;
+  white-space: nowrap;
+}
+
+/* The actual popover element */
+#tooltip-popover {
+  /* Reset default popover styles */
+  position: fixed;
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--accentlight);
+  font-size: 10px;
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 4px;
+  pointer-events: none; /* Don't interfere with mouse */
+
+  /* Top Layer behavior */
+  inset: auto;
+  display: none; /* Hidden by default */
+}
+
+/* When the popover is active */
+#tooltip-popover:popover-open {
+  display: block;
+}
+
+/* GitHub's color scale (adjusted for your blue theme) */
+.day-level-1 {
+  background-color: #193f53;
+}
+.day-level-2 {
+  background-color: #306782;
+}
+.day-level-3 {
+  background-color: #4da3cb;
+}
+.day-level-4 {
+  background-color: #a2dff8;
+}
+
+.loading-text {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Container to handle the custom arrow positioning */
+.year-selector-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#year-filter {
+  appearance: none; /* Hides the default browser arrow */
+  -webkit-appearance: none;
+  background-color: var(--card-bg);
+  color: var(--accentlight);
+  border: 1px solid var(--border);
+  padding: 4px 30px 4px 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover and Focus states to match your other interactive elements */
+#year-filter:hover {
+  border-color: var(--accentdark);
+}
+
+#year-filter:focus {
+  border-color: var(--accentlight);
+  box-shadow: 0 0 0 1px var(--accentdark);
+}
+
+/* Custom CSS Arrow (replaces the browser default) */
+.year-selector-wrapper::after {
+  content: "\f0d7"; /* FontAwesome Caret Down */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accentlight);
+  pointer-events: none; /* Let clicks pass through to the select */
+  font-size: 10px;
+}
+
+/* Styling the actual dropdown list (Works in Chrome/Edge/Firefox) */
+#year-filter option {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  padding: 10px;
+}
+
+/* --- Mobile / Tablet Transitions --- */
+@media (max-width: 850px) {
+  .dashboard {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  /* Row 1: Full-width Hero */
+  .hero {
+    grid-column: span 12;
+    order: 1;
+  }
+
+  /* Row 2: Two half-width widgets */
+  .deployment-region {
+    grid-column: span 6;
+    order: 2;
+  }
+  .career-uptime {
+    grid-column: span 6;
+    order: 3;
+  }
+
+  /* Row 3: Full-width Event Logs (Moved UP) */
+  .event-logs {
+    grid-column: span 12;
+    order: 4;
+  }
+
+  /* Row 4: Full-width Packages (Moved DOWN) */
+  .packages-installed {
+    grid-column: span 12;
+    order: 5;
+    display: flex; /* Flexbox allows the side-by-side split you asked for */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .packages-installed .pkg-list-container {
+    flex: 1;
+  }
+  .packages-installed .legend-box {
+    flex: 1;
+    margin-top: 0; /* Override the desktop margin-top: auto */
+  }
+
+  .commit-graph-container {
+    grid-template-columns: repeat(53, 10px); /* 52-53 weeks */
+    grid-template-rows: repeat(7, 10px); /* 7 days */
+  }
+
+  .commit-day {
+    width: 10px;
+    height: 10px;
+  }
+
+  #month-labels {
+    grid-template-columns: repeat(53, 10px);
+  }
+
+  .github-activity .legend-square {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 500px) {
+  /* Stack everything 100% wide, but keep the new order */
+  .hero,
+  .career-uptime,
+  .deployment-region,
+  .event-logs,
+  .packages-installed {
+    grid-column: span 12;
+  }
+
+  /* On very small screens, let packages stack vertically again for readability */
+  .packages-installed {
+    flex-direction: column;
+  }
 }
