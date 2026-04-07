@@ -39,7 +39,7 @@ async function fetchGithubActivity(year = "") {
   monthContainer.innerHTML = "";
 
   try {
-    const url = `http://localhost:8000/api/githubChart/${year ? "?year=" + year : ""}`;
+    const url = `http://api.marshallcodes.com/api/githubChart/${year ? "?year=" + year : ""}`;
     const response = await fetch(url);
     if (!response.ok) throw new Error("Network response was not ok");
     const data = await response.json();
