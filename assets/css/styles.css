@@ -128,8 +128,8 @@ body {
 }
 
 .portrait {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   flex-shrink: 0;
   border-radius: 50%;
   border: 2px solid var(--accentdark);
@@ -390,6 +390,10 @@ body {
   }
   .log-container {
     max-height: 180px;
+  }
+  .portrait {
+    width: 120px;
+    height: 120px;
   }
 }
 @media (max-width: 500px) {
