@@ -16,7 +16,10 @@
     <body>
         <div id="tooltip-popover" popover></div>
         <div class="header">
-            <div class="sys-title">HOME > DASHBOARDS > ENGINEER_METRICS</div>
+            <div class="sys-title">
+                <span class="mobile-text"><i class="fa-solid fa-terminal"></i>DASHBOARD</span>
+                <span class="desktop-text">HOME > DASHBOARDS > METRICS</span>
+            </div>
             <div class="sys-status">
                 STATUS: <span class="pulse"></span> LIVE | <span id="clock">00:00:00</span>
             </div>
@@ -127,12 +130,12 @@
 
                 <div class="log-container">
                     <div 
-                        class="log-row log-grid" 
+                        class="log-row log-grid open" 
                         onclick="this.classList.toggle('open')" 
                         onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
                         tabindex="0" 
                         role="button" 
-                        aria-expanded="false"
+                        aria-expanded="true"
                     >
                         <span class="log-time" id="current-log-time"></span>
                         <div class="log-event">
@@ -140,7 +143,7 @@
                             <span class="tag-status">STATUS:</span> Currently building software...
                         </div>
                         <div class="log-details">
-                            Actively developing cloud-native applications and developing my skills through work and hobby projects.
+                            Actively developing cloud-native enterprise applications and sharpening my skills through work
                         </div>
                     </div>
 
@@ -158,7 +161,7 @@
                             <span class="tag-finish">FINISH:</span> MSCS | Georgia Tech
                         </div>
                         <div class="log-details">
-                            Completed Master of Science in Computer Science with a focus on Computing Systems.
+                            Completed Master of Science in Computer Science with a focus on Computing Systems
                         </div>
                     </div>
 
@@ -176,7 +179,7 @@
                             <span class="tag-status">STATUS:</span> Promoted to SWE II | Leidos
                         </div>
                         <div class="log-details">
-                            Advanced to Software Engineer II, taking on increased responsibility in full-stack development and architectural design.
+                            Advanced to Software Engineer II, taking on increased responsibility in full-stack development and architectural design
                         </div>
                     </div>
 
@@ -194,7 +197,7 @@
                             <span class="tag-start">START:</span> SWE I | Leidos
                         </div>
                         <div class="log-details">
-                            Began first full-time role as a full-stack software engineer focusing on enterprise-scale web applications.
+                            Began first full-time role as a full-stack software engineer focusing on enterprise-scale web applications
                         </div>
                     </div>
 
@@ -212,7 +215,7 @@
                             <span class="tag-finish">FINISH:</span> Internship | Amazon
                         </div>
                         <div class="log-details">
-                            Finished 3-month internship working on large-scale ML infrastructure for Amazon.com.
+                            Finished 3-month internship working on large-scale ML infrastructure for Amazon.com
                         </div>
                     </div>
 
@@ -230,7 +233,7 @@
                             <span class="tag-start">START:</span> Internship | Amazon
                         </div>
                         <div class="log-details">
-                            Joined Amazon as a Software Development Engineer Intern in Sunnyvale, California.
+                            Joined Amazon as a Software Development Engineer Intern in Sunnyvale, California
                         </div>
                     </div>
 
@@ -248,7 +251,7 @@
                             <span class="tag-finish">FINISH:</span> Internship | Leidos
                         </div>
                         <div class="log-details">
-                            Finished 5-month internship doing full-stack web development in a large enterprise environment.
+                            Finished 5-month internship doing full-stack web development in a large enterprise environment
                         </div>
                     </div>
 
@@ -266,7 +269,7 @@
                             <span class="tag-start">START:</span> Internship | Leidos
                         </div>
                         <div class="log-details">
-                            Joined Leidos as a Software Engineer Intern in Reston, Virginia.
+                            Joined Leidos as a Software Engineer Intern in Reston, Virginia
                         </div>
                     </div>
 
@@ -284,7 +287,7 @@
                             <span class="tag-start">START:</span> MSCS | Georgia Tech
                         </div>
                         <div class="log-details">
-                            Enrolled in Georgia Tech's OMSCS program to continue developing technical expertise in programming and computing systems.
+                            Enrolled in Georgia Tech's OMSCS program to continue developing technical expertise in programming and computing systems
                         </div>
                     </div>
 
@@ -302,7 +305,7 @@
                             <span class="tag-status">STATUS:</span> Career pivot | Civil -> Software Engineering
                         </div>
                         <div class="log-details">
-                            Developed a passion for technology and software development, so I decided to fully dedicate my time to becoming a better programmer and learning computer science fundamentals.
+                            Developed a passion for technology and software development, so I decided to fully dedicate my time to becoming a better programmer and learning computer science fundamentals
                         </div>
                     </div>
 
@@ -320,7 +323,7 @@
                             <span class="tag-finish">FINISH:</span> Bachelor of Engineering | Auburn University
                         </div>
                         <div class="log-details">
-                            Graduated with a Bachelor's degree in Civil Engineering (summa cum laude) with 4 semesters of internships throughout the degree.
+                            Graduated with a Bachelor's degree in Civil Engineering (summa cum laude) with 4 semesters of internships throughout the degree
                         </div>
                     </div>
 
@@ -338,7 +341,7 @@
                             <span class="tag-status">STATUS:</span> Learned how to code
                         </div>
                         <div class="log-details">
-                            First learned programming fundamentals in an Intro to Programming course in Matlab during my undergraduate degree.
+                            First learned programming fundamentals in an Intro to Programming course in Matlab during my undergraduate degree
                         </div>
                     </div>
                 </div>
