@@ -429,7 +429,7 @@ body {
 
 /* Container for the link row */
 .hero .sub-value:last-child {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 }
 @media (max-width: 500px) {
