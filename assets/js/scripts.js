@@ -1,3 +1,9 @@
+// --- Persistence & State ---
+let hiScore = localStorage.getItem('snake-hi-score') || 0;
+let dx = 0; 
+let dy = 0;
+let inputQueue = []; 
+
 function updateClock() {
   const now = new Date();
   const timeString = now
@@ -115,12 +121,188 @@ async function fetchGithubActivity(year = "") {
   }
 }
 
+// --- Snake Game Logic ---
+const canvas = document.getElementById('snakeCanvas');
+const ctx = canvas ? canvas.getContext('2d') : null;
+const scoreEl = document.getElementById('snake-score');
+const hiScoreEl = document.getElementById('snake-hi-score');
+const startBtn = document.getElementById('start-game');
+const overlay = document.getElementById('game-overlay');
+
+let snake = [];
+let food = {};
+let score = 0;
+let gameInterval;
+const gridSize = 20;
+let cols, rows;
+
+function resizeCanvas() {
+    if (!canvas) return;
+    
+    const parent = canvas.parentElement;
+    const parentW = parent.clientWidth;
+    const parentH = parent.clientHeight;
+    
+    cols = Math.floor(parentW / gridSize);
+    rows = Math.floor(parentH / gridSize);
+    
+    // Set internal resolution AND implicit CSS dimensions
+    canvas.width = cols * gridSize;
+    canvas.height = rows * gridSize;
+}
+
+function initSnakeGame() {
+    resizeCanvas();
+    overlay.style.display = 'none';
+    inputQueue = []; 
+    
+    const statusTag = document.querySelector('.snake-subsystem .status-tag');
+    if (statusTag) {
+        statusTag.innerText = "RUNNING";
+        statusTag.style.color = "var(--success)";
+    }
+
+    const startX = Math.floor(cols / 2);
+    const startY = Math.floor(rows / 2);
+    snake = [{x: startX, y: startY}];
+    
+    generateFood();
+    dx = 1; dy = 0; 
+    score = 0;
+    if (scoreEl) scoreEl.innerText = "00";
+    
+    if (gameInterval) clearInterval(gameInterval);
+    gameInterval = setInterval(gameLoop, 150); 
+}
+
+function gameLoop() {
+    if (inputQueue.length > 0) {
+        const nextMove = inputQueue.shift();
+        dx = nextMove.x;
+        dy = nextMove.y;
+    }
+
+    moveSnake();
+    if (checkCollision()) {
+        handleGameOver();
+        return;
+    }
+    draw();
+}
+
+function handleGameOver() {
+    clearInterval(gameInterval);
+    overlay.style.display = 'flex';
+    
+    const statusTag = document.querySelector('.snake-subsystem .status-tag');
+    if (statusTag) {
+        statusTag.innerText = "GAME OVER";
+        statusTag.style.color = "#f85149";
+    }
+
+    if (score > hiScore) {
+        hiScore = score;
+        localStorage.setItem('snake-hi-score', hiScore);
+        if (hiScoreEl) hiScoreEl.innerText = hiScore.toString().padStart(2, '0');
+    }
+}
+
+function moveSnake() {
+    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    snake.unshift(head);
+    if (head.x === food.x && head.y === food.y) {
+        score++;
+        if (scoreEl) scoreEl.innerText = score.toString().padStart(2, '0');
+        generateFood();
+    } else {
+        snake.pop();
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#f85149';
+    ctx.fillRect(food.x * gridSize + 2, food.y * gridSize + 2, gridSize - 4, gridSize - 4);
+    
+    snake.forEach((part, index) => {
+        ctx.fillStyle = index === 0 ? '#fff' : '#a5c3cf';
+        ctx.fillRect(part.x * gridSize + 1, part.y * gridSize + 1, gridSize - 2, gridSize - 2);
+    });
+}
+
+function generateFood() {
+    food = {
+        x: Math.floor(Math.random() * cols),
+        y: Math.floor(Math.random() * rows)
+    };
+    
+    const onSnake = snake.some(part => part.x === food.x && part.y === food.y);
+    if (onSnake) generateFood();
+}
+
+function checkCollision() {
+    const head = snake[0];
+    const hitWall = head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows;
+    const hitSelf = snake.slice(1).some(part => part.x === head.x && part.y === head.y);
+    return hitWall || hitSelf;
+}
+
+function handleDirectionChange(key) {
+    let requestedMove;
+    switch(key) {
+        case 'ArrowUp': case 'ctrl-up': requestedMove = { x: 0, y: -1 }; break;
+        case 'ArrowDown': case 'ctrl-down': requestedMove = { x: 0, y: 1 }; break;
+        case 'ArrowLeft': case 'ctrl-left': requestedMove = { x: -1, y: 0 }; break;
+        case 'ArrowRight': case 'ctrl-right': requestedMove = { x: 1, y: 0 }; break;
+        default: return;
+    }
+
+    const lastIntendedDir = inputQueue.length > 0 
+        ? inputQueue[inputQueue.length - 1] 
+        : { x: dx, y: dy };
+
+    const isReversal = (requestedMove.x === -lastIntendedDir.x && requestedMove.y === -lastIntendedDir.y);
+    const isSame = (requestedMove.x === lastIntendedDir.x && requestedMove.y === lastIntendedDir.y);
+
+    // Prevent reversals, prevent duplicating the same move, limit queue size
+    if (!isReversal && !isSame && inputQueue.length < 2) {
+        inputQueue.push(requestedMove);
+    }
+}
+
+// --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
   updateClock();
   setInterval(updateClock, 1000);
   calculateUptime();
   updateCurrentLogDate();
   fetchGithubActivity();
+
+  if (hiScoreEl) hiScoreEl.innerText = hiScore.toString().padStart(2, '0');
+
+  window.addEventListener('keydown', e => {
+      if (overlay && overlay.style.display === 'none') {
+          if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+              e.preventDefault();
+              handleDirectionChange(e.key);
+          }
+      }
+  });
+
+  ['ctrl-up', 'ctrl-down', 'ctrl-left', 'ctrl-right'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) {
+          const trigger = (e) => {
+              e.preventDefault();
+              handleDirectionChange(id);
+          };
+          btn.addEventListener('click', trigger);
+          btn.addEventListener('touchstart', trigger, {passive: false});
+      }
+  });
+
+  if (canvas && startBtn) startBtn.addEventListener('click', initSnakeGame);
 
   document.querySelectorAll(".log-row").forEach((row) => {
     row.addEventListener("click", () => {

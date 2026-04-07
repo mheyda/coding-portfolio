@@ -397,6 +397,41 @@
                     </div>
                 </div>
             </div>
+            <div class="widget snake-subsystem">
+                <div class="label" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span><i class="fa-solid fa-gamepad"></i> Snake_Game</span>
+                    <span class="status-tag">WAITING</span>
+                </div>
+                <div class="snake-container">
+                    <canvas id="snakeCanvas" width="260" height="260"></canvas>
+                    <div id="game-overlay" class="game-overlay">
+                        <button id="start-game">START GAME</button>
+                        <p class="controls-hint">Use Arrow Keys to Navigate</p>
+                    </div>
+                </div>
+                <div class="mobile-controls">
+                    <button class="d-btn up" id="ctrl-up"><i class="fa-solid fa-caret-up"></i></button>
+                    <div class="d-row">
+                        <button class="d-btn left" id="ctrl-left"><i class="fa-solid fa-caret-left"></i></button>
+                        <button class="d-btn right" id="ctrl-right"><i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                    <button class="d-btn down" id="ctrl-down"><i class="fa-solid fa-caret-down"></i></button>
+                </div>
+                <div class="snake-scores">
+                    <span>Score: <span id="snake-score">00</span></span>
+                    <span>| High Score: <span id="snake-hi-score">00</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                © Marshall Heyda <span id="year"></span>. All rights reserved.
+                <script>
+                    var date = new Date().getFullYear();
+                    document.getElementById("year").innerHTML = date;
+                </script>
+            </div>
+        </div>
         <script src="assets/js/scripts.js"></script>
     </body>
 </html>
