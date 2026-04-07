@@ -7,7 +7,7 @@
   --accentlight: #a5c3cf; /* Your secondary blue */
   --neutralgray: #ebebeb;
   --text-main: #c9d1d9; /* Light text */
-  --text-dim: #8b949e; /* Muted text */
+  --text-dim: #b0b0b0; /* Muted text */
   --success: #238636; /* Online pulse green */
 }
 
@@ -206,7 +206,7 @@ body {
 }
 
 .log-header span {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--accentlight);
   letter-spacing: 1px;
@@ -333,7 +333,7 @@ body {
   border-radius: 6px;
   color: var(--accentlight);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-bottom: 8px;
   font-family: "JetBrains Mono", monospace;
   transition: 0.2s;
@@ -350,7 +350,7 @@ body {
   gap: 12px;
   align-items: center;
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -417,12 +417,20 @@ body {
     grid-column: span 2;
   }
   .log-container {
-    max-height: 180px;
+    max-height: 300px;
   }
   .portrait {
     width: 120px;
     height: 120px;
   }
+  .endpoint-link {
+  font-size: 0.9rem;
+}
+
+/* Container for the link row */
+.hero .sub-value:last-child {
+  font-size: 1.1rem;
+}
 }
 @media (max-width: 500px) {
   .dashboard {
@@ -528,7 +536,7 @@ body {
 
 /* Specific text styling for the bricks */
 .pkg-name {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-family: "JetBrains Mono", monospace;
   color: var(--text-main);
 }
@@ -557,7 +565,7 @@ body {
   margin-bottom: 0;
 }
 .packages-installed .legend-text {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--text-dim);
   font-family: "JetBrains Mono", monospace;
 }
@@ -576,9 +584,15 @@ body {
 }
 .career-uptime {
   grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .deployment-region {
   grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .packages-installed {
@@ -647,7 +661,7 @@ body {
   gap: 8px;
   color: var(--text-dim);
   font-family: "JetBrains Mono", monospace;
-  font-size: 9px;
+  font-size: 0.7rem;
   letter-spacing: 0.5px;
 }
 
@@ -665,7 +679,7 @@ body {
 
 .github-activity .legend-label {
   margin: 0 4px;
-  font-size: 9px;
+  font-size: 0.7rem;
 }
 
 /* Reusing the color logic for legend squares */
@@ -728,7 +742,7 @@ body {
   /* 53 columns to match the maximum number of weeks in a year */
   grid-template-columns: repeat(53, 15px);
   gap: 3px;
-  font-size: 9px;
+  font-size: 0.7rem;
   color: var(--text-dim);
   margin-bottom: 5px;
   font-family: "JetBrains Mono", monospace;
