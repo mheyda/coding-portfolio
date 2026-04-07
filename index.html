@@ -1,609 +1,437 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta Tags -->
         <meta charset="UTF-8">
-        <meta name="keywords" content="HTML, CSS, JavaScript, Django, Java, git, Bootstrap, Python, Self-Taught, Engineer">
-        <meta name="author" content="Marshall Heyda">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Marshall's Coding Profile | marshallcodes.com">
+        <meta property="og:description" content="Software Engineer @ Leidos | MSCS @ Georgia Tech">
+        <meta property="og:image" content="https://marshallcodes.com/assets/images/og-preview.jpg"> 
 
-        <meta name="title" property="og:title" content="Marshall's Coding Portfolio" />
-        <meta property="og:type" content="Website" />
-        <meta name="image" property="og:image" content="" />
-        <meta name="description" property="og:description" content="Marshall's Coding Portfolio" />
-
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        
-        <!-- Link to styles sheet -->
-        <link rel="stylesheet" href="assets/css/styles.css" />
-
-        <!-- Browser Icon -->
-        <link href="https://api.iconify.design/vs/m-square.svg?color=%232A3132" rel="icon">
-
-        <!-- Preload web fonts -->
-        <link rel="preload" as="font">
-
-        <title>Marshall's Portfolio</title>
+        <title>Marshall's Coding Profile | marshallcodes.com</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a7e713de55.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <!-- Navigation -->
-        <div class="background-container dark" id="home">
-            <div class="content-container home">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand plain-link text-align-center" href="#home">
-                        <h4>MARSHALL HEYDA</h4>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span>
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav text-align-center">
-                            <a class="nav-link light-text-link" href="#about">About</a>
-                            <a class="nav-link light-text-link" href="#coursework">Coursework</a>
-                            <a class="nav-link light-text-link" href="#projects">Projects</a>
-                            <!-- <a class="nav-link light-text-link" href="#certificates">Certificates</a> -->
-                            <a class="nav-link light-text-link" href="#skills">Skills</a>
-                            <a class="nav-link light-text-link" href="#contact">Contact</a>
-                        </div>
-                    </div>
-                </nav>
+        <div id="tooltip-popover" popover></div>
+        <div class="header">
+            <div class="sys-title">
+                <span class="mobile-text"><i class="fa-solid fa-terminal"></i>DASHBOARD</span>
+                <span class="desktop-text">HOME > DASHBOARDS > METRICS</span>
+            </div>
+            <div class="sys-status">
+                STATUS: <span class="pulse"></span> LIVE | <span id="clock">00:00:00</span>
             </div>
         </div>
 
-        <!-- About -->
-        <div class="background-container" id="about">
-            <div class="row no-gutters content-container light text-align-justify">
-                <div class="col-md-16 col-lg-4 left-half-container text-align-center">
-                    <img src="images/Portrait 1 1000x1000.webp" class="self-portrait img-fluid text-padding-right" alt="Portrait of Marshall">
-                </div>
-                <div class="col-md-16 col-lg-8 right-half-container">
-                    <div class="about-me text-align-center">
-                        <h2 class="light-heading">Hi, I'm Marshall!</h2>
-                        <h3 class="text-align-left">Thanks for visiting. Here's a little bit about me:</h3>
-                        <ul class="text-align-left">
-                            <li>
-                                I'm a current software engineer at <a href="https://leidos.com" target="_blank">Leidos</a> building public-facing web appliations
-                            </li>
-                            <li>
-                                I graduated with a master's degree in computer science from <a href="https://www.gatech.edu/" target="_blank">Georgia Tech</a> in 2024
-                            </li>
-                            <li>
-                                My previous experience includes Full-Stack Web Development, Cloud/DevOps, AI/ML Infrastructure, and Microservices
-                            </li>
-                        </ul>
+        <div class="dashboard">
+            <div class="widget hero">
+                <div class="hero-main">
+                    <img src="images/Portrait 1 1000x1000.webp" alt="Portrait" class="portrait">
+                    <div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: white;">Marshall Heyda</div>
+                        <div class="sub-value">Software Engineer @ Leidos | MSCS @ Georgia Tech</div>
                     </div>
-                    <div class="about-me text-align-left">Feel free to request my resume <a href="mailto:marshallheyda@gmail.com">here</a>, or keep reading to view my graduate coursework and personal projects!</div>
+                </div>
+                <div class="sub-value">
+                    <a href="mailto:marshallheyda@gmail.com"><span style="opacity: 0.5;">--</span>marshallheyda@gmail.com</a> 
+                    <a href="https://linkedin.com/in/marshallheyda/" target="_blank"><span style="opacity: 0.5;">--</span>linkedin</a> 
+                    <a href="https://github.com/mheyda/" target="_blank"><span style="opacity: 0.5;">--</span>github</a>
                 </div>
             </div>
-        </div>
-        <!-- Script for Read More/Read Less -->
-        <script>
-            var readMore = document.getElementById("read-more");
 
-                readMore.addEventListener("click", function() {
-                this.classList.toggle("read-less");
-                var content = this.previousElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                  this.ariaLabel = "Read More";
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                  this.ariaLabel = "Read Less";
-                } 
-                });
-        </script>
+            <div class="widget deployment-region">
+                <div class="label"><i class="fas fa-globe"></i> Deployment_Region</div>
+                <div class="big-value">San Francisco, CA</div>
+                <div class="sub-value">Primary Availability</div>
+            </div>
 
-        <!-- Coursework -->
-        <div class="background-container light text-align-center" id="coursework">
-            <div class="content-container gray">
-                <h2 class="dark-heading">
-                    Graduate Coursework
-                    <br>
-                    <div style="font-size: 20px; padding: 0.5rem;">
-                        MSCS @ Georgia Tech
-                        <br>
-                        Graduated December 2024
+            <div class="widget career-uptime">
+                <div class="label"><i class="fas fa-history"></i> Career_Uptime</div>
+                <div class="big-value" id="uptime-val"></div>
+                <div class="sub-value">Years of Full-Time Experience</div>
+            </div>
+
+            <div class="widget packages-installed">
+                <div class="pkg-list-container">
+                    <div class="label"><i class="fas fa-box-open"></i> Packages_Installed</div>    
+                    <div class="pkg-grid-layout">
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">Python / Django</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">TypeScript / React</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">AWS</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">PostgreSQL</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">Docker</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">Terraform / CloudFormation</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-green"></span>
+                            <span class="pkg-name">nginx</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-yellow"></span>
+                            <span class="pkg-name">Java / Spring Boot</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-yellow"></span>
+                            <span class="pkg-name">NoSQL / MongoDB</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-yellow"></span>
+                            <span class="pkg-name">Scala / Apache Spark</span>
+                        </div>
+                        <div class="pkg-item">
+                            <span class="indicator status-red"></span>
+                            <span class="pkg-name">C++ / C</span>
+                        </div>
                     </div>
-                </h2>
-                <div class="row align-items-start no-gutters skills-content">
-                    <a href="https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms" target="_blank" aria-label="Georgia Tech Intro to Graduate Algorithms" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon" data-icon="ph:graph-bold"></span>
-                        <br>
-                        Graduate Algorithms
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-6200-introduction-operating-systems" target="_blank" aria-label="Georgia Tech Intro to Operating Systems" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="fa:gears"></span>
-                        <br>
-                        Operating Systems
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-6290-high-performance-computer-architecture" target="_blank" aria-label="Georgia Tech High Performance Computer Architecture" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="jam:microchip"></span>
-                        <br>
-                        High Performance <br> Computer Architecture
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software" target="_blank" aria-label="Georgia Tech GPU Hardware and Software" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="fluent:brain-circuit-24-filled"></span>
-                        <br>
-                        GPU Hardware and Software
-                    </a>
-                    
-                    <a href="https://omscs.gatech.edu/cs-6250-computer-networks" target="_blank" aria-label="Georgia Tech Computer Networks" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mynaui:globe"></span>
-                        <br>
-                        Computer Networks
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-6035-introduction-to-information-security" target="_blank" aria-label="Georgia Tech Intro to Information Security" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:security-lock"></span>
-                        <br>
-                        Information Security
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-7646-machine-learning-trading" target="_blank" aria-label="Georgia Tech Machine Learning for Trading" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="eos-icons:machine-learning"></span>
-                        <br>
-                        Machine Learning for Trading
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-7638-robotics-ai-techniques" target="_blank" aria-label="Georgia Tech Robotics: AI Techniques" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:head-cog"></span>
-                        <br>
-                        Robotics: AI Techniques
-                    </a>
-                    <a href="https://omscs.gatech.edu/cs-8803-o15-introduction-computer-law" target="_blank" aria-label="Georgia Tech Computer Law" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="octicon:law-16"></span>
-                        <br>
-                        Computer Law
-                    </a>
-                    <a href="https://omscs.gatech.edu/mgt-6311-digital-marketing" target="_blank" aria-label="Georgia Tech Digital Marketing" rel="noreferrer" class="dark-icon-link col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="nimbus:marketing"></span>
-                        <br>
-                        Digital Marketing
-                    </a>
+                </div>
+
+                <div class="legend-box">
+                    <div class="legend-item">
+                        <span class="indicator status-green"></span>
+                        <span class="legend-text">Active: Used in current daily workflow</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="indicator status-yellow"></span>
+                        <span class="legend-text">Idle: Proficient; used in prior roles</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="indicator status-red"></span>
+                        <span class="legend-text">Legacy: Academic or hobbyist use</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Projects -->
-        <div class="background-container text-align-center" id="projects">
-            <div class="content-container projects light">
-                <h2 class="light-heading">Personal Projects</h2>
-                <!-- First Project-->
-                <div class="row align-items-center no-gutters even">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>National Park Explorer</h3>
-                            <p><strong>React, Redux, Django, PostgreSQL, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                Knowing the mental and physical benefits of getting outside, I wanted to develop a web app that would 
-                                allow people to get inspired by America's national parks. This fully responsive full-stack web app consumes 
-                                three REST APIs from the 
-                                National Park Service, OpenWeatherMap, and Leaflet to display information and weather data about 
-                                national parks in both list and map format. Parks can be searched for, sorted, and filtered by multiple 
-                                criteria so users can find parks more relevant to their interests. Additionally, to make the app more 
-                                personalized, users can also sign up for an account to save their favorite parks to their profile for 
-                                future reference.
-                            </p>
-                            <a href="https://npe.marshallcodes.com" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
-                            <a href="https://github.com/mheyda/national-park-explorer" target="_blank" rel="noreferrer" class="light-button">GitHub Repo</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <img src="images/editing-images/National Park Explorer Cover Photo.jpg" class="img-fluid project-photos" alt="Screenshot of National Park Explorer Application Map">
-                    </div>
-                </div>
-
-                <!-- Second Project-->
-                <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-12 col-lg-6">
-                        <img src="images/Print Store Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Photography Ecommerce Application">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Photography Ecommerce</h3>
-                            <p><strong>React, Redux, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                As a hobbyist photographer, I wanted to practice my frontend skills by developing 
-                                a simple and fully responsive ecommerce app for photography prints. 
-                                The project was originally built with plain JavaScript, HTML, and CSS, but was 
-                                later converted into a React and Redux application for better organization and maintainability.
-                            </p>
-                            <p class="text-align-justify">
-                                The app provides users a full shopping experience, allowing them to adjust their cart at every 
-                                step along the way. Primary functionality is listed below.
-                                <ul class="text-align-left">
-                                    <li>Add, update, and remove items from cart</li>
-                                    <li>Pull product data from a local JSON file</li>
-                                    <li>Image carousel and modal box for users to view all images for a product</li>
-                                </ul>
-                            </p>
-                            <a href="https://mheyda-print-store.netlify.app" target="_blank" rel="noreferrer" class="dark-button">Live Demo</a>
-                            <a href="https://github.com/mheyda/print-store" target="_blank" rel="noreferrer" class="light-button">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third project -->
-                <!-- <div class="row align-items-center no-gutters even">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>List Maker</h3>
-                            <p><strong>React, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">
-                                As someone who constantly makes lists—whether it's a to-do list, grocery list, or trip checklist—I 
-                                wanted to build a web application for this purpose. The end result is a classic CRUD application for
-                                making checklists built with React, HTML, and CSS that allows users to sort 
-                                and filter their lists based on desired criteria. 
-                            </p>
-                            <p class="text-align-justify">
-                                The greatest challenge I faced while building my first React project was learning how to properly update 
-                                state variables using hooks. At times I struggled to understand why certain components were not re-rendering 
-                                when I expected them to, but I learned a lot and gained confidence as I progressed through the project.
-                            </p>
-                            <a href="https://github.com/mheyda/marshalls-list-maker" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-list-maker.netlify.app/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                    <div class="col-md-16 col-lg-6">
-                        <img src="images/List App Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
-                    </div>
-                </div> -->
-
-                <!-- Fourth Project-->
-                <!-- <div class="row align-items-center no-gutters odd">
-                    <div class="col-md-16 col-lg-6">
-                        <img src="images/Wiki Cover Photo.webp" class="img-fluid project-photos" alt="Screenshot of Wiki Application">
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                        <div class="project-description">
-                            <h3>Wiki App</h3>
-                            <p><strong>Python/Django, HTML, and CSS</strong></p>
-                            <p class="text-align-justify">A wiki-style CRUD application made with Django using 
-                                Python, HTML, and CSS. Functionality includes viewing, creating, editing, and deleting 
-                                wiki entries, searching for entries, and selecting a page at random. 
-                                <br>
-                                <br>
-                                The app is deployed on Heroku where a live demo version can be viewed.
-                                Note: functionality has intentionally been limited for the demo.
-                            </p>
-                            <a href="https://github.com/mheyda/cs50w-wiki" target="_blank" rel="noreferrer" class="dark-button">GitHub Repo</a>
-                            <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank" rel="noreferrer" class="light-button">Live Demo</a>
-                        </div>
-                    </div>
-                </div> -->
+            <div class="widget event-logs">
+                <div class="label"><i class="fas fa-terminal"></i> Event_Logs</div>
                 
-            </div>
-        </div>
+                <div class="log-header log-grid">
+                    <span>TIMESTAMP</span>
+                    <span>MESSAGE</span>
+                </div>
 
-        <!-- Skills -->
-        <div class="background-container light text-align-center" id="skills">
-            <div class="content-container gray">
-                <h2 class="dark-heading">Skills</h2>
-                <div class="row align-items-start no-gutters skills-content">
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:apachespark"></span>
-                        <br>
-                        Apache Spark
+                <div class="log-container">
+                    <div 
+                        class="log-row log-grid open" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="true"
+                    >
+                        <span class="log-time" id="current-log-time"></span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-status">STATUS:</span> Currently building software...
+                        </div>
+                        <div class="log-details">
+                            Actively developing cloud-native enterprise applications and sharpening my skills through work
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:aws"></span>
-                        <br>
-                        AWS
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2024/12]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-finish">FINISH:</span> MSCS | Georgia Tech
+                        </div>
+                        <div class="log-details">
+                            Completed Master of Science in Computer Science with a focus on Computing Systems
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <i class="fab fa-bootstrap light-icon skills-icon"></i>
-                        <br>
-                        Bootstrap
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2024/07]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-status">STATUS:</span> Promoted to SWE II | Leidos
+                        </div>
+                        <div class="log-details">
+                            Advanced to Software Engineer II, taking on increased responsibility in full-stack development and architectural design
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <i class="fa-solid fa-c light-icon skills-icon"></i>
-                        <br>
-                        C
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2024/02]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-start">START:</span> SWE I | Leidos
+                        </div>
+                        <div class="log-details">
+                            Began first full-time role as a full-stack software engineer focusing on enterprise-scale web applications
+                        </div>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <i class="fa-solid fa-chart-simple light-icon skills-icon"></i>
-                        <br>
-                        ChartJS
-                    </div> -->
-                    <!-- <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-confluence light-icon skills-icon"></i>
-                        <br>
-                        Confluence
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <i class="fab fa-css3-alt light-icon skills-icon"></i>
-                        <br>
-                        CSS
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2023/09]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-finish">FINISH:</span> Internship | Amazon
+                        </div>
+                        <div class="log-details">
+                            Finished 3-month internship working on large-scale ML infrastructure for Amazon.com
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:language-cpp"></span>
-                        <br>
-                        C++
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2023/06]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-start">START:</span> Internship | Amazon
+                        </div>
+                        <div class="log-details">
+                            Joined Amazon as a Software Development Engineer Intern in Sunnyvale, California
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:django"></span>
-                        <br>
-                        Django
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2023/05]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-finish">FINISH:</span> Internship | Leidos
+                        </div>
+                        <div class="log-details">
+                            Finished 5-month internship doing full-stack web development in a large enterprise environment
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:docker"></span>
-                        <br>
-                        Docker
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2023/01]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-start">START:</span> Internship | Leidos
+                        </div>
+                        <div class="log-details">
+                            Joined Leidos as a Software Engineer Intern in Reston, Virginia
+                        </div>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-figma light-icon skills-icon"></i>
-                        <br>
-                        Figma
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <i class="fab fa-git-alt light-icon skills-icon"></i>
-                        <br>
-                        Git
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2022/08]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-start">START:</span> MSCS | Georgia Tech
+                        </div>
+                        <div class="log-details">
+                            Enrolled in Georgia Tech's OMSCS program to continue developing technical expertise in programming and computing systems
+                        </div>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <i class="fab fa-github light-icon skills-icon"></i>
-                        <br>
-                        GitHub
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2021/07]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-status">STATUS:</span> Career pivot | Civil -> Software Engineering
+                        </div>
+                        <div class="log-details">
+                            Developed a passion for technology and software development, so I decided to fully dedicate my time to becoming a better programmer and learning computer science fundamentals
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-gitlab light-icon skills-icon"></i>
-                        <br>
-                        GitLab
-                    </div> -->
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="cib:heroku"></span>
-                        <br>
-                        Heroku
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <i class="fab fa-html5 light-icon skills-icon"></i>
-                        <br>
-                        HTML
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2021/05]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-finish">FINISH:</span> Bachelor of Engineering | Auburn University
+                        </div>
+                        <div class="log-details">
+                            Graduated with a Bachelor's degree in Civil Engineering (summa cum laude) with 4 semesters of internships throughout the degree
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-js light-icon skills-icon"></i>
-                        <br>
-                        JavaScript
+
+                    <div 
+                        class="log-row log-grid" 
+                        onclick="this.classList.toggle('open')" 
+                        onkeydown="if(event.key === 'Enter' || event.key === ' ') { this.classList.toggle('open'); event.preventDefault(); }"
+                        tabindex="0" 
+                        role="button" 
+                        aria-expanded="false"
+                    >
+                        <span class="log-time">[2018/08]</span>
+                        <div class="log-event">
+                            <span class="log-arrow">▶</span>
+                            <span class="tag-status">STATUS:</span> Learned how to code
+                        </div>
+                        <div class="log-details">
+                            First learned programming fundamentals in an Intro to Programming course in Matlab during my undergraduate degree
+                        </div>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-jira light-icon skills-icon"></i>
-                        <br>
-                        Jira
-                    </div> -->
+                </div>
+            </div>
+
+            <div class="widget github-activity">
+                <div class="label" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span><i class="fab fa-github"></i> GITHUB_CONTRIBUTIONS</span>
+                    <div class="year-selector-wrapper">
+                        <select id="year-filter" onchange="fetchGithubActivity(this.value)" style="background: var(--bg); color: var(--text-main); border: 1px solid var(--border); font-size: 0.7rem; border-radius: 4px;">
+                            <option value="">Past Year</option>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="github-graph-wrapper">
+                    <div class="day-labels" style="flex-shrink: 0; display: grid; grid-template-rows: repeat(7, 10px); gap: 3px; margin-top: 20px; font-size: 0.7rem; color: var(--text-dim); font-family: 'JetBrains Mono';">
+                        <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
+                    </div>
                     
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:laravel"></span>
-                        <br>
-                        Laravel
+                    <div>
+                        <div id="month-labels"></div>
+                        
+                        <div id="github-graph" class="commit-graph-container">
+                            <div class="loading-text">Synchronizing...</div>
+                        </div>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:mariadb"></span>
-                        <br>
-                        MariaDB
+                </div>
+                <div class="github-activity-footer">
+                    <div class="footer-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Personal/hobby projects only</span>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="lineicons:mongodb"></span>
-                        <br>
-                        MongoDB
+
+                    <div class="legend">
+                        <span class="legend-label">Less</span>
+                        <div class="legend-square l0"></div>
+                        <div class="legend-square l1"></div>
+                        <div class="legend-square l2"></div>
+                        <div class="legend-square l3"></div>
+                        <div class="legend-square l4"></div>
+                        <span class="legend-label">More</span>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="cib:netlify"></span>
-                        <br>
-                        Netlify
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="devicon-plain:php"></span>
-                        <br>
-                        PHP
+                </div>
+            </div>
+            <div class="widget snake-subsystem">
+                <div class="label" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span><i class="fa-solid fa-gamepad"></i> Snake_Game</span>
+                    <span class="status-tag">WAITING</span>
+                </div>
+                <div class="snake-container">
+                    <canvas id="snakeCanvas" width="260" height="260"></canvas>
+                    <div id="game-overlay" class="game-overlay">
+                        <button id="start-game">START GAME</button>
+                        <p class="controls-hint">Use Arrow Keys to Navigate</p>
                     </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="akar-icons:postgresql-fill"></span>
-                        <br>
-                        PostgreSQL
+                </div>
+                <div class="mobile-controls">
+                    <button class="d-btn up" id="ctrl-up"><i class="fa-solid fa-caret-up"></i></button>
+                    <div class="d-row">
+                        <button class="d-btn left" id="ctrl-left"><i class="fa-solid fa-caret-left"></i></button>
+                        <button class="d-btn right" id="ctrl-right"><i class="fa-solid fa-caret-right"></i></button>
                     </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:pytest"></span>
-                        <br>
-                        pytest
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <i class="fab fa-python light-icon skills-icon"></i>
-                        <br>
-                        Python
-                    </div>
-                    <div class="col-sm-1 skills-col">
-                        <i class="fa-brands fa-react light-icon skills-icon"></i>
-                        <br>
-                        React
-                    </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="akar-icons:redux-fill"></span>
-                        <br>
-                        Redux
-                    </div> -->
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="mdi:responsive"></span>
-                        <br>
-                        Responsive Design
-                    </div>
-                    -->
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="devicon-plain:scala"></span>
-                        <br>
-                        Scala
-                    </div>
-                    <!--
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="file-icons:sqlite"></span>
-                        <br>
-                        SQLite
-                    </div> -->
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="cib:typescript"></span>
-                        <br>
-                        TypeScript
-                    </div>
-                    <!-- <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="simple-icons:virtualbox"></span>
-                        <br>
-                        VirtualBox
-                    </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="carbon:logo-vmware"></span>
-                        <br>
-                        VMware
-                    </div>
-                    <div class="col-sm-1 skills-col">
-                        <span class="iconify light-icon skills-icon" data-icon="akar-icons:vscode-fill"></span>
-                        <br>
-                        VS Code
-                    </div> -->
+                    <button class="d-btn down" id="ctrl-down"><i class="fa-solid fa-caret-down"></i></button>
+                </div>
+                <div class="snake-scores">
+                    <span>Score: <span id="snake-score">00</span></span>
+                    <span>| High Score: <span id="snake-hi-score">00</span></span>
                 </div>
             </div>
         </div>
-
-        <!-- Certificates -->
-        <!-- 
-        <div class="background-container text-align-center" id="certificates">
-            <div class="content-container gray">
-                <h2 class="dark-heading">Certificates</h2>
-                <div class="row align-items-center no-gutters certificates">
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/codecademy-logo.webp" alt="Codecademy Logo">
-                            <h3 class="text-align-left certificates-title"><strong>Create an Advanced Web App with React and Redux</strong></h3>
-                            <span>
-                                <a href="https://www.codecademy.com/profiles/board1116828090/certificates/60198396cd6fb3000e88e8e4" target="_blank" rel="noreferrer" class="plain-text-link">View Certificate</a>
-                                <br>
-                            </span>
-                            Topics Covered: JSX, Components, State, Hooks, Redux Core Concepts, Redux Toolkit, Middleware, Thunks, Deployment
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/codecademy-logo.webp" alt="Codecademy Logo">
-                            <h3 class="text-align-left certificates-title"><strong>Learn TypeScript</strong></h3>
-                            <span>
-                                <a href="https://www.codecademy.com/profiles/board1116828090/certificates/56fb1e71303e37b643bb1905f31c8a09" target="_blank" rel="noreferrer" class="plain-text-link">View Certificate</a>
-                                <br>
-                            </span>
-                            Topics Covered: Types, Functions, Complex Types, Union Types, Type Narrowing, Advanced Object Types
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/codecademy-logo.webp" alt="Codecademy Logo">
-                            <h3 class="text-align-left certificates-title"><strong>Learn Intermediate JavaScript</strong></h3>
-                            <span>
-                                <a href="https://www.codecademy.com/profiles/board1116828090/certificates/512386fdc7f6c934f98b01e6afa8285a" target="_blank" rel="noreferrer" class="plain-text-link">View Certificate</a>
-                                <br>
-                            </span>
-                            Topics Covered: Classes, Modules, Promises, Async-Await, Requests, Error Handling, Best Practices
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/gtpe-logo.webp" alt="Georgia Tech Professional Education Logo">
-                            <h3 class="text-align-left certificates-title"><strong>Data Structures & Algorithms</strong></h3>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/b57155fcfc2d4796869efe02869a084c" target="_blank" rel="noreferrer" class="plain-text-link">Part I:</a>
-                                ArrayLists, LinkedLists, Stacks, Queues<br>
-                            </span>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/1ab09f816bc245299f530465e763a1c0" target="_blank" rel="noreferrer" class="plain-text-link">Part II:</a>
-                                Binary Trees, Heaps, SkipLists, HashMaps<br>
-                            </span>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/7861078605de4d9fba069e4fd737915e" target="_blank" rel="noreferrer" class="plain-text-link">Part III:</a>
-                                AVL and 2-4 Trees, Divide and Conquer Algorithms<br>
-                            </span>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/7399a775489d4e7abdc1d79db4327924" target="_blank" rel="noreferrer" class="plain-text-link">Part IV:</a>
-                                Pattern Matching, Dijkstra's, MST, Dynamic Programming Algorithms<br>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/gtpe-logo.webp" alt="Georgia Tech Professional Education Logo">
-                            <h3 class="text-align-left certificates-title"><strong>Introduction to Object-Oriented Programming with Java</strong></h3>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/56cea7eba7f04c4b8c0173c1d838bef5" target="_blank" rel="noreferrer" class="plain-text-link">Part I:</a>
-                                Foundations and Syntax Basics<br>
-                            </span>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/b4881f52f361425b9cb3390a462cab5c" target="_blank" rel="noreferrer" class="plain-text-link">Part II:</a>
-                                Object-Oriented Programming and Algorithms<br>
-                            </span>
-                            <span>
-                                <a href="https://courses.edx.org/certificates/a44bb1466ac647a5ba268da4715c5268" target="_blank" rel="noreferrer" class="plain-text-link">Part III:</a>
-                                Exceptions, Data Structures, Recursion, and GUIs<br>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-6 certificates-col">
-                        <div class="certificates-content text-align-left">
-                            <img class="certificates-image" src="images/harvard-logo.webp" alt="Harvard University Logo">
-                            <h3 class="text-align-left certificates-title"><strong>CS50: Introduction to Computer Science</strong></h3>
-                            <span>
-                                <a href="https://certificates.cs50.io/bc6807c5-38ad-4848-a239-ba20617aabed" target="_blank" rel="noreferrer" class="plain-text-link">View Certificate</a>
-                                <br>
-                            </span>
-                            Topics Covered: C, Arrays, Algorithms, Memory, Data Structures, Python, SQL, HTML, CSS, JavaScript, Flask, Security, Artificial Intelligence
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-
-        <!-- Footer -->
-        <footer class="background-container dark text-align-center" id="contact">
-            <div class="content-container footer-flex">
-                <div class="footer-left">
-                    <p>
-                        <h2>Let's Connect!</h2>
-                        Send me an email or find me on social media at the links below.
-                    </p>
-                    <br>
-                    <p>
-                        <a class="accent-button" href="mailto:marshallheyda@gmail.com">Send Me an Email</a>
-                    </p>
-                    <a href="https://www.linkedin.com/in/marshallheyda/" target="_blank" aria-label="Marshall's LinkedIn" rel="noreferrer" class="light-icon-link">
-                        <i class="fa fa-linkedin footer-icon" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/mheyda" target="_blank" aria-label="Marshall's Github" rel="noreferrer" class="light-icon-link">
-                        <i class="fa fa-github footer-icon" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="footer-right">
-                    <a class="light-text-link footer-link" href="#home">Home</a>
-                    <a class="light-text-link footer-link" href="#about">About</a>
-                    <a class="light-text-link footer-link" href="#coursework">Coursework</a>
-                    <a class="light-text-link footer-link" href="#projects">Projects</a>
-                    <!-- <a class="light-text-link footer-link" href="#certificates">Certificates</a> -->
-                    <a class="light-text-link footer-link" href="#skills">Skills</a>
-                    <a class="light-text-link footer-link" href="#contact">Contact</a>
-                    <br>
-                </div>
-            </div>
-            <div class="copyright dark">
+        <div class="footer">
+            <div>
                 © Marshall Heyda <span id="year"></span>. All rights reserved.
                 <script>
                     var date = new Date().getFullYear();
                     document.getElementById("year").innerHTML = date;
                 </script>
             </div>
-        </footer>
-        <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/a7e713de55.js" crossorigin="anonymous"></script>
-
-        <!-- Iconify library -->
-        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        </div>
+        <script src="assets/js/scripts.js"></script>
     </body>
 </html>
